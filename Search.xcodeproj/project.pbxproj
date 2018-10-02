@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE08121639EAA00C6212E /* AppDelegate.swift */; };
 		52FCE08C21639EAD00C6212E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE08A21639EAD00C6212E /* LaunchScreen.storyboard */; };
-		52FCE09721639EAD00C6212E /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE09621639EAD00C6212E /* SearchTests.swift */; };
+		52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE09621639EAD00C6212E /* SearchFilterTests.swift */; };
 		52FCE0A321639F1000C6212E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE0A221639F1000C6212E /* Assets.xcassets */; };
 		52FCE0AC2163A08600C6212E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0AA2163A08600C6212E /* SearchViewController.swift */; };
 		52FCE0AD2163A08600C6212E /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE0AB2163A08600C6212E /* SearchViewController.xib */; };
@@ -21,6 +21,9 @@
 		52FCE0B92163A17100C6212E /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0B82163A17100C6212E /* SearchPresenter.swift */; };
 		52FCE0BB2163A1B300C6212E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0BA2163A1B300C6212E /* Router.swift */; };
 		52FCE0BD2163A1E000C6212E /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0BC2163A1E000C6212E /* SearchRouter.swift */; };
+		52FCE0C42163A91E00C6212E /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0C32163A91E00C6212E /* SearchService.swift */; };
+		52FCE0C62163AA3A00C6212E /* SearchFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0C52163AA3A00C6212E /* SearchFilter.swift */; };
+		52FCE0C82163ABFA00C6212E /* SearchURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0C72163ABFA00C6212E /* SearchURL.swift */; };
 		6271AD6BB37BA498C7CA5180 /* Pods_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92004E25F732C52F32EBE1BF /* Pods_Search.framework */; };
 		E3131FBC27D9F0DB9FE129CB /* Pods_SearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 127AD2CCE681440FC70F87A7 /* Pods_SearchTests.framework */; };
 /* End PBXBuildFile section */
@@ -42,7 +45,7 @@
 		52FCE08B21639EAD00C6212E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52FCE08D21639EAD00C6212E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FCE09221639EAD00C6212E /* SearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52FCE09621639EAD00C6212E /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
+		52FCE09621639EAD00C6212E /* SearchFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterTests.swift; sourceTree = "<group>"; };
 		52FCE09821639EAD00C6212E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FCE0A221639F1000C6212E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52FCE0AA2163A08600C6212E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +58,9 @@
 		52FCE0B82163A17100C6212E /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		52FCE0BA2163A1B300C6212E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		52FCE0BC2163A1E000C6212E /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		52FCE0C32163A91E00C6212E /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		52FCE0C52163AA3A00C6212E /* SearchFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilter.swift; sourceTree = "<group>"; };
+		52FCE0C72163ABFA00C6212E /* SearchURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchURL.swift; sourceTree = "<group>"; };
 		5D4222691399CF664339180A /* Pods-Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Search/Pods-Search.debug.xcconfig"; sourceTree = "<group>"; };
 		92004E25F732C52F32EBE1BF /* Pods_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E214A488DF9630156852839 /* Pods-SearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchTests/Pods-SearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +134,7 @@
 		52FCE09521639EAD00C6212E /* SearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				52FCE09621639EAD00C6212E /* SearchTests.swift */,
+				52FCE0CB2163B50200C6212E /* Entity */,
 				52FCE09821639EAD00C6212E /* Info.plist */,
 			);
 			path = SearchTests;
@@ -150,6 +156,7 @@
 				52FCE0A721639F4700C6212E /* Presenter */,
 				52FCE0A821639F5100C6212E /* Entity */,
 				52FCE0A921639F5900C6212E /* Router */,
+				52FCE0C22163A91200C6212E /* Service */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -186,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				52FCE0B02163A11800C6212E /* ProductItem.swift */,
+				52FCE0C52163AA3A00C6212E /* SearchFilter.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -197,6 +205,23 @@
 				52FCE0BC2163A1E000C6212E /* SearchRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		52FCE0C22163A91200C6212E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				52FCE0C72163ABFA00C6212E /* SearchURL.swift */,
+				52FCE0C32163A91E00C6212E /* SearchService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		52FCE0CB2163B50200C6212E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				52FCE09621639EAD00C6212E /* SearchFilterTests.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		6346A242F7BAF7517BFC5C34 /* Frameworks */ = {
@@ -370,8 +395,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				52FCE0B12163A11800C6212E /* ProductItem.swift in Sources */,
+				52FCE0C62163AA3A00C6212E /* SearchFilter.swift in Sources */,
 				52FCE0B32163A12500C6212E /* SearchEventHandler.swift in Sources */,
 				52FCE0AC2163A08600C6212E /* SearchViewController.swift in Sources */,
+				52FCE0C42163A91E00C6212E /* SearchService.swift in Sources */,
 				52FCE0AF2163A08D00C6212E /* SearchView.swift in Sources */,
 				52FCE0BB2163A1B300C6212E /* Router.swift in Sources */,
 				52FCE0B52163A13800C6212E /* SearchInteractorIO.swift in Sources */,
@@ -379,6 +406,7 @@
 				52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */,
 				52FCE0B92163A17100C6212E /* SearchPresenter.swift in Sources */,
 				52FCE0B72163A15100C6212E /* SearchInteractor.swift in Sources */,
+				52FCE0C82163ABFA00C6212E /* SearchURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FCE09721639EAD00C6212E /* SearchTests.swift in Sources */,
+				52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
