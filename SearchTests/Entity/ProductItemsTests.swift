@@ -37,4 +37,15 @@ class ProductItemsTests: XCTestCase {
         XCTAssert(productItem.priceRange == "20", "Expected priceRange is '20'")
     }
 
+    func testSerializeJsonProductItemWithInvalidJson() {
+        let productItem = ProductItem(json: ["a", "b"])
+
+        XCTAssert(productItem.id == 0, "Expected id is 0")
+        XCTAssert(productItem.name.isEmpty, "Expected name is empty")
+        XCTAssert(productItem.uri.isEmpty, "Expected uri is empty")
+        XCTAssert(productItem.imageUri.isEmpty, "Expected imageUri is empty")
+        XCTAssert(productItem.imageUri700.isEmpty, "Expected imageUri700 is empty")
+        XCTAssert(productItem.price.isEmpty, "Expected imageUri is empty")
+        XCTAssert(productItem.priceRange.isEmpty, "Expected priceRange is empty")
+    }
 }
