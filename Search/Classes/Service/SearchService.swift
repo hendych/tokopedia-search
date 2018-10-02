@@ -8,21 +8,24 @@
 
 import Alamofire
 
-typealias Completion = ([String: Any]?, Error?) -> Void
+typealias Completion = ([String: Any]?, ApiError?) -> Void
 
-func requestSearch(_ filter: SearchFilter, start: Int, rows: Int = 10,
-                   completion: @escaping Completion) {
+class SearchService {
+    func requestSearch(_ filter: SearchFilter, start: Int, rows: Int,
+                       completion: @escaping Completion) {
 
-    let param = filter.toJson()
+        let param = filter.toJson()
 
-    let request = SessionManager.default.request(SearchURL.search(parameters: param)).validate()
+        let request = SessionManager.default.request(SearchURL.search(parameters: param)).validate()
 
-    request.responseJSON { (response) in
-        switch response.result {
-        case .success(let value):
-            completion(value as? [String: Any], nil)
-        case .failure(let error):
-            completion(nil, error)
+        request.responseJSON { (response) in
+            switch response.result {
+            case .success(let value):
+                completion(value as? [String: Any], nil)
+            case .failure:
+                let apiError = ApiError(type: .networkError)
+                completion(nil, apiError)
+            }
         }
     }
 }

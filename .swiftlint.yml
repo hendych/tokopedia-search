@@ -3,3 +3,4 @@ identifier_name:
 
 excluded:
   - Pods
+  - SearchTests/Mocks

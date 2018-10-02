@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ProductItem {
+struct ProductItem: Equatable {
     private(set) var id = 0
     private(set) var name = ""
     private(set) var uri = ""
@@ -17,9 +17,9 @@ struct ProductItem {
     private(set) var price = ""
     private(set) var priceRange = ""
 
-    init(json: Any?) {
+    init?(json: Any?) {
         guard let json = json as? [String: Any] else {
-            return
+            return nil
         }
 
         self.id = json["id"] as? Int ?? 0

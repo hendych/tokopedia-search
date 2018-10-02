@@ -9,4 +9,5 @@
 import Foundation
 
 protocol SearchView: class {
+    func showSearchResults(searchResults: [ProductItem], nextPage: Int)
 }

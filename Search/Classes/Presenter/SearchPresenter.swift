@@ -17,4 +17,12 @@ class SearchPresenter: SearchEventHandler, SearchInteractorOutput {
         self.interactor = interactor
         self.router = router
     }
+
+    // MARK: - SearchInteractorOutput
+    func foundSearchResult(results: [ProductItem], nextPage: Int) {
+        view?.showSearchResults(searchResults: results, nextPage: nextPage)
+    }
+
+    func foundApiError(error: ApiError) {
+    }
 }

@@ -20,13 +20,19 @@ class ProductItemsTests: XCTestCase {
     }
 
     func testSerializeJsonProductItem() {
-        let productItem = ProductItem(json: ["id": 0,
-                                             "name": "kabel",
-                                             "uri": "abc",
-                                             "image_uri": "bcd",
-                                             "image_uri_700": "ccc",
-                                             "price": "Rp. 1",
-                                             "price_range": "20"])
+        let json: [String: Any] = ["id": 0,
+                                   "name": "kabel",
+                                   "uri": "abc",
+                                   "image_uri": "bcd",
+                                   "image_uri_700": "ccc",
+                                   "price": "Rp. 1",
+                                   "price_range": "20"]
+
+        guard let productItem = ProductItem(json: json) else {
+            XCTFail("Failed to create product item")
+
+            return
+        }
 
         XCTAssert(productItem.id == 0, "Expected id is '0'")
         XCTAssert(productItem.name == "kabel", "Expected name is 'kabel'")
@@ -40,12 +46,6 @@ class ProductItemsTests: XCTestCase {
     func testSerializeJsonProductItemWithInvalidJson() {
         let productItem = ProductItem(json: ["a", "b"])
 
-        XCTAssert(productItem.id == 0, "Expected id is 0")
-        XCTAssert(productItem.name.isEmpty, "Expected name is empty")
-        XCTAssert(productItem.uri.isEmpty, "Expected uri is empty")
-        XCTAssert(productItem.imageUri.isEmpty, "Expected imageUri is empty")
-        XCTAssert(productItem.imageUri700.isEmpty, "Expected imageUri700 is empty")
-        XCTAssert(productItem.price.isEmpty, "Expected imageUri is empty")
-        XCTAssert(productItem.priceRange.isEmpty, "Expected priceRange is empty")
+        XCTAssert(productItem == nil, "Expected product item is nil")
     }
 }

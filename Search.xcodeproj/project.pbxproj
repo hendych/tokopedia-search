@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52B4C55F2163C9A700958A90 /* MockSearchInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C55E2163C9A700958A90 /* MockSearchInteractorInput.swift */; };
+		52B4C5612163CA6000958A90 /* MockSearchInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C5602163CA6000958A90 /* MockSearchInteractorOutput.swift */; };
+		52B4C5632163CBC700958A90 /* MockSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C5622163CBC700958A90 /* MockSearchService.swift */; };
+		52B4C5662163D43300958A90 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C5652163D43300958A90 /* ApiError.swift */; };
 		52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE08121639EAA00C6212E /* AppDelegate.swift */; };
 		52FCE08C21639EAD00C6212E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE08A21639EAD00C6212E /* LaunchScreen.storyboard */; };
 		52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE09621639EAD00C6212E /* SearchFilterTests.swift */; };
@@ -25,6 +29,7 @@
 		52FCE0C62163AA3A00C6212E /* SearchFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0C52163AA3A00C6212E /* SearchFilter.swift */; };
 		52FCE0C82163ABFA00C6212E /* SearchURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0C72163ABFA00C6212E /* SearchURL.swift */; };
 		52FCE0D82163C2ED00C6212E /* ProductItemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0D72163C2ED00C6212E /* ProductItemsTests.swift */; };
+		52FCE0DB2163C7DA00C6212E /* SearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0DA2163C7DA00C6212E /* SearchInteractorTests.swift */; };
 		6271AD6BB37BA498C7CA5180 /* Pods_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92004E25F732C52F32EBE1BF /* Pods_Search.framework */; };
 		E3131FBC27D9F0DB9FE129CB /* Pods_SearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 127AD2CCE681440FC70F87A7 /* Pods_SearchTests.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +46,10 @@
 
 /* Begin PBXFileReference section */
 		127AD2CCE681440FC70F87A7 /* Pods_SearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B4C55E2163C9A700958A90 /* MockSearchInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchInteractorInput.swift; sourceTree = "<group>"; };
+		52B4C5602163CA6000958A90 /* MockSearchInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchInteractorOutput.swift; sourceTree = "<group>"; };
+		52B4C5622163CBC700958A90 /* MockSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchService.swift; sourceTree = "<group>"; };
+		52B4C5652163D43300958A90 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		52FCE07E21639EAA00C6212E /* Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCE08121639EAA00C6212E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FCE08B21639EAD00C6212E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +72,7 @@
 		52FCE0C52163AA3A00C6212E /* SearchFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilter.swift; sourceTree = "<group>"; };
 		52FCE0C72163ABFA00C6212E /* SearchURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchURL.swift; sourceTree = "<group>"; };
 		52FCE0D72163C2ED00C6212E /* ProductItemsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemsTests.swift; sourceTree = "<group>"; };
+		52FCE0DA2163C7DA00C6212E /* SearchInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorTests.swift; sourceTree = "<group>"; };
 		5D4222691399CF664339180A /* Pods-Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Search/Pods-Search.debug.xcconfig"; sourceTree = "<group>"; };
 		92004E25F732C52F32EBE1BF /* Pods_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E214A488DF9630156852839 /* Pods-SearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchTests/Pods-SearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +111,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		52B4C55D2163C99500958A90 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				52B4C55E2163C9A700958A90 /* MockSearchInteractorInput.swift */,
+				52B4C5602163CA6000958A90 /* MockSearchInteractorOutput.swift */,
+				52B4C5622163CBC700958A90 /* MockSearchService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		52B4C5642163D42C00958A90 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				52B4C5652163D43300958A90 /* ApiError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		52FCE07521639EAA00C6212E = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +164,8 @@
 		52FCE09521639EAD00C6212E /* SearchTests */ = {
 			isa = PBXGroup;
 			children = (
+				52B4C55D2163C99500958A90 /* Mocks */,
+				52FCE0D92163C7CD00C6212E /* Interactor */,
 				52FCE0CB2163B50200C6212E /* Entity */,
 				52FCE09821639EAD00C6212E /* Info.plist */,
 			);
@@ -212,6 +242,7 @@
 		52FCE0C22163A91200C6212E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				52B4C5642163D42C00958A90 /* Error */,
 				52FCE0C72163ABFA00C6212E /* SearchURL.swift */,
 				52FCE0C32163A91E00C6212E /* SearchService.swift */,
 			);
@@ -225,6 +256,14 @@
 				52FCE0D72163C2ED00C6212E /* ProductItemsTests.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		52FCE0D92163C7CD00C6212E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				52FCE0DA2163C7DA00C6212E /* SearchInteractorTests.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		6346A242F7BAF7517BFC5C34 /* Frameworks */ = {
@@ -404,6 +443,7 @@
 				52FCE0C42163A91E00C6212E /* SearchService.swift in Sources */,
 				52FCE0AF2163A08D00C6212E /* SearchView.swift in Sources */,
 				52FCE0BB2163A1B300C6212E /* Router.swift in Sources */,
+				52B4C5662163D43300958A90 /* ApiError.swift in Sources */,
 				52FCE0B52163A13800C6212E /* SearchInteractorIO.swift in Sources */,
 				52FCE0BD2163A1E000C6212E /* SearchRouter.swift in Sources */,
 				52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */,
@@ -418,7 +458,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				52FCE0D82163C2ED00C6212E /* ProductItemsTests.swift in Sources */,
+				52B4C5612163CA6000958A90 /* MockSearchInteractorOutput.swift in Sources */,
+				52B4C55F2163C9A700958A90 /* MockSearchInteractorInput.swift in Sources */,
+				52B4C5632163CBC700958A90 /* MockSearchService.swift in Sources */,
 				52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */,
+				52FCE0DB2163C7DA00C6212E /* SearchInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

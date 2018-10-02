@@ -9,7 +9,11 @@
 import Foundation
 
 protocol SearchInteractorInput: class {
+    func requestSearch(withFilter filter: SearchFilter, start: Int, num: Int)
 }
 
 protocol SearchInteractorOutput: class {
+    func foundSearchResult(results: [ProductItem], nextPage: Int)
+
+    func foundApiError(error: ApiError)
 }
