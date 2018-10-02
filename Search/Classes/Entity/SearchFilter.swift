@@ -11,11 +11,15 @@ import Foundation
 struct SearchFilter: Equatable {
     let query = "samsung"
 
-    private(set) var minPrice = "100"
-    private(set) var maxPrice = "8000000"
-    private(set) var wholesale = false
-    private(set) var official = true
-    private(set) var fshop = "2"
+    let minPrice: String
+    let maxPrice: String
+    let wholesale: Bool
+    let official: Bool
+    let fshop: String
+
+    init() {
+        self.init(minPrice: "100", maxPrice: "8000000", wholesale: false, official: true, fshop: "2")
+    }
 
     init(minPrice: String, maxPrice: String, wholesale: Bool, official: Bool, fshop: String) {
         self.minPrice = minPrice
