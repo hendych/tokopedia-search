@@ -9,7 +9,7 @@
 import Foundation
 
 class SearchPresenter: SearchEventHandler, SearchInteractorOutput {
-    weak var view: SearchViewController?
+    weak var view: SearchView?
     let interactor: SearchInteractorInput
     let router: SearchRouter
 

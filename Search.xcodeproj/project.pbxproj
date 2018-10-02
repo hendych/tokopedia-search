@@ -11,6 +11,9 @@
 		52B4C5612163CA6000958A90 /* MockSearchInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C5602163CA6000958A90 /* MockSearchInteractorOutput.swift */; };
 		52B4C5632163CBC700958A90 /* MockSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C5622163CBC700958A90 /* MockSearchService.swift */; };
 		52B4C5662163D43300958A90 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C5652163D43300958A90 /* ApiError.swift */; };
+		52B4C5702163D8B000958A90 /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C56F2163D8B000958A90 /* SearchPresenterTests.swift */; };
+		52B4C5722163D8B700958A90 /* MockSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C5712163D8B700958A90 /* MockSearchRouter.swift */; };
+		52B4C5742163D8D600958A90 /* MockSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C5732163D8D600958A90 /* MockSearchView.swift */; };
 		52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE08121639EAA00C6212E /* AppDelegate.swift */; };
 		52FCE08C21639EAD00C6212E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE08A21639EAD00C6212E /* LaunchScreen.storyboard */; };
 		52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE09621639EAD00C6212E /* SearchFilterTests.swift */; };
@@ -50,6 +53,9 @@
 		52B4C5602163CA6000958A90 /* MockSearchInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchInteractorOutput.swift; sourceTree = "<group>"; };
 		52B4C5622163CBC700958A90 /* MockSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchService.swift; sourceTree = "<group>"; };
 		52B4C5652163D43300958A90 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		52B4C56F2163D8B000958A90 /* SearchPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
+		52B4C5712163D8B700958A90 /* MockSearchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSearchRouter.swift; sourceTree = "<group>"; };
+		52B4C5732163D8D600958A90 /* MockSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchView.swift; sourceTree = "<group>"; };
 		52FCE07E21639EAA00C6212E /* Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCE08121639EAA00C6212E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FCE08B21639EAD00C6212E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -117,6 +123,8 @@
 				52B4C55E2163C9A700958A90 /* MockSearchInteractorInput.swift */,
 				52B4C5602163CA6000958A90 /* MockSearchInteractorOutput.swift */,
 				52B4C5622163CBC700958A90 /* MockSearchService.swift */,
+				52B4C5712163D8B700958A90 /* MockSearchRouter.swift */,
+				52B4C5732163D8D600958A90 /* MockSearchView.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -127,6 +135,14 @@
 				52B4C5652163D43300958A90 /* ApiError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		52B4C56E2163D8B000958A90 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				52B4C56F2163D8B000958A90 /* SearchPresenterTests.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		52FCE07521639EAA00C6212E = {
@@ -166,6 +182,7 @@
 			children = (
 				52B4C55D2163C99500958A90 /* Mocks */,
 				52FCE0D92163C7CD00C6212E /* Interactor */,
+				52B4C56E2163D8B000958A90 /* Presenter */,
 				52FCE0CB2163B50200C6212E /* Entity */,
 				52FCE09821639EAD00C6212E /* Info.plist */,
 			);
@@ -459,9 +476,12 @@
 			files = (
 				52FCE0D82163C2ED00C6212E /* ProductItemsTests.swift in Sources */,
 				52B4C5612163CA6000958A90 /* MockSearchInteractorOutput.swift in Sources */,
+				52B4C5722163D8B700958A90 /* MockSearchRouter.swift in Sources */,
 				52B4C55F2163C9A700958A90 /* MockSearchInteractorInput.swift in Sources */,
 				52B4C5632163CBC700958A90 /* MockSearchService.swift in Sources */,
+				52B4C5702163D8B000958A90 /* SearchPresenterTests.swift in Sources */,
 				52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */,
+				52B4C5742163D8D600958A90 /* MockSearchView.swift in Sources */,
 				52FCE0DB2163C7DA00C6212E /* SearchInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
