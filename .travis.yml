@@ -1,0 +1,6 @@
+language: objective-c
+osx_image: xcode10
+script:
+- xcodebuild -workspace "Search.xcworkspace" -scheme "Search" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6' -enableCodeCoverage YES test
+after_success:
+- bash <(curl -s https://codecov.io/bash)
