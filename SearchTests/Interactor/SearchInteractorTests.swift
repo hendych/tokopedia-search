@@ -46,12 +46,14 @@ class SearchInteractorTests: XCTestCase {
             expectedResults.append(item)
         }
 
-        interactor?.requestSearch(withFilter: searchFilter, start: 0, num: 5)
+        interactor?.requestSearch(withFilter: searchFilter, start: 10, num: 5)
 
         XCTAssert(mockOutput?.invokedFoundSearchResultCount == 1,
                   "Expect foundSearchResult called once")
         XCTAssert(mockOutput?.invokedFoundApiError == false,
                   "Expect foundApiError is not invoked")
+        XCTAssert(mockOutput?.invokedFoundSearchResultParameters?.nextPage == 15,
+                  "Expect foundApiError invoked with nextPage start + num")
 
         guard let results = mockOutput?.invokedFoundSearchResultParameters?.results else {
             XCTFail("Expect results is not nil")
