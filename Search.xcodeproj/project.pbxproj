@@ -24,6 +24,7 @@
 		52FCE0C42163A91E00C6212E /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0C32163A91E00C6212E /* SearchService.swift */; };
 		52FCE0C62163AA3A00C6212E /* SearchFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0C52163AA3A00C6212E /* SearchFilter.swift */; };
 		52FCE0C82163ABFA00C6212E /* SearchURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0C72163ABFA00C6212E /* SearchURL.swift */; };
+		52FCE0D82163C2ED00C6212E /* ProductItemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0D72163C2ED00C6212E /* ProductItemsTests.swift */; };
 		6271AD6BB37BA498C7CA5180 /* Pods_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92004E25F732C52F32EBE1BF /* Pods_Search.framework */; };
 		E3131FBC27D9F0DB9FE129CB /* Pods_SearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 127AD2CCE681440FC70F87A7 /* Pods_SearchTests.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		52FCE0C32163A91E00C6212E /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		52FCE0C52163AA3A00C6212E /* SearchFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilter.swift; sourceTree = "<group>"; };
 		52FCE0C72163ABFA00C6212E /* SearchURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchURL.swift; sourceTree = "<group>"; };
+		52FCE0D72163C2ED00C6212E /* ProductItemsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemsTests.swift; sourceTree = "<group>"; };
 		5D4222691399CF664339180A /* Pods-Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Search/Pods-Search.debug.xcconfig"; sourceTree = "<group>"; };
 		92004E25F732C52F32EBE1BF /* Pods_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E214A488DF9630156852839 /* Pods-SearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchTests/Pods-SearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				52FCE09621639EAD00C6212E /* SearchFilterTests.swift */,
+				52FCE0D72163C2ED00C6212E /* ProductItemsTests.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FCE0D82163C2ED00C6212E /* ProductItemsTests.swift in Sources */,
 				52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
