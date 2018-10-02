@@ -58,4 +58,18 @@ class SearchPresenterTests: XCTestCase {
         XCTAssert(mockView?.invokedShowSearchResultsParameters?.nextPage == 20,
                   "Expect showSearchResults invoked with parameter next page 20")
     }
+
+    func testHandleEventOnRequestSearch() {
+        let searchFilter = SearchFilter(minPrice: "0", maxPrice: "20", wholesale: true,
+                                        official: true, fshop: "1")
+        presenter?.onRequestSearch(withFilter: searchFilter, start: 1, num: 30)
+
+        XCTAssert(mockInteractor?.invokedRequestSearchCount == 1, "Expect requestSearch called once")
+        XCTAssert(mockInteractor?.invokedRequestSearchParameters?.filter == searchFilter,
+                  "Expected search filter parameter sent is not same!")
+        XCTAssert(mockInteractor?.invokedRequestSearchParameters?.num == 30,
+                  "Expected num parameter sent is not same!")
+        XCTAssert(mockInteractor?.invokedRequestSearchParameters?.start == 1,
+                  "Expected num parameter start is not same!")
+    }
 }

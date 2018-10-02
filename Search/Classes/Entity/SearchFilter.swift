@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SearchFilter {
+struct SearchFilter: Equatable {
     let query = "samsung"
 
     private(set) var minPrice = "100"

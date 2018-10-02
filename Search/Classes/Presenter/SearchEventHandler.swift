@@ -9,4 +9,5 @@
 import Foundation
 
 protocol SearchEventHandler: class {
+    func onRequestSearch(withFilter filter: SearchFilter, start: Int, num: Int)
 }

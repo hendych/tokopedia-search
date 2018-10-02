@@ -18,6 +18,11 @@ class SearchPresenter: SearchEventHandler, SearchInteractorOutput {
         self.router = router
     }
 
+    // MARK: - SearchEventHandler
+    func onRequestSearch(withFilter filter: SearchFilter, start: Int, num: Int) {
+        interactor.requestSearch(withFilter: filter, start: start, num: num)
+    }
+
     // MARK: - SearchInteractorOutput
     func foundSearchResult(results: [ProductItem], nextPage: Int) {
         view?.showSearchResults(searchResults: results, nextPage: nextPage)
