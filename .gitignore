@@ -21,6 +21,9 @@ DerivedData/
 xcuserdata/
 *.xcuserstate
 
+## Pods
+Pods/
+
 ## Other
 *.moved-aside
 *.xccheckout
