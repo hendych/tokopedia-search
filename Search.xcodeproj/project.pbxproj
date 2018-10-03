@@ -21,20 +21,28 @@
 		52F5EF3F2163E8F100321B32 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF3E2163E8F100321B32 /* UICollectionViewCellExtension.swift */; };
 		52F5EF452164752300321B32 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF442164752300321B32 /* UIImageExtension.swift */; };
 		52F5EF4721647F3200321B32 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF4621647F3200321B32 /* UIColorExtension.swift */; };
+		52F5EF53216480CF00321B32 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF4E216480CF00321B32 /* SearchViewController.swift */; };
+		52F5EF54216480CF00321B32 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF4F216480CF00321B32 /* SearchView.swift */; };
+		52F5EF56216480CF00321B32 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F5EF51216480CF00321B32 /* SearchViewController.xib */; };
+		52F5EF5C216480DC00321B32 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF5A216480DC00321B32 /* SearchInteractor.swift */; };
+		52F5EF5D216480DC00321B32 /* SearchInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF5B216480DC00321B32 /* SearchInteractorIO.swift */; };
+		52F5EF62216480E600321B32 /* SearchEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF5F216480E600321B32 /* SearchEventHandler.swift */; };
+		52F5EF63216480E600321B32 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF60216480E600321B32 /* SearchPresenter.swift */; };
+		52F5EF65216480FB00321B32 /* SearchFilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF64216480FB00321B32 /* SearchFilterRouter.swift */; };
+		52F5EF672164810100321B32 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF662164810100321B32 /* SearchRouter.swift */; };
+		52F5EF692164814400321B32 /* SearchFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF682164814400321B32 /* SearchFilterView.swift */; };
+		52F5EF6C2164816500321B32 /* SearchFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF6A2164816500321B32 /* SearchFilterViewController.swift */; };
+		52F5EF6D2164816500321B32 /* SearchFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F5EF6B2164816500321B32 /* SearchFilterViewController.xib */; };
+		52F5EF6F2164817700321B32 /* SearchFilterInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF6E2164817700321B32 /* SearchFilterInteractorIO.swift */; };
+		52F5EF712164818000321B32 /* SearchFilterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF702164818000321B32 /* SearchFilterInteractor.swift */; };
+		52F5EF73216481AE00321B32 /* SearchFilterEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF72216481AE00321B32 /* SearchFilterEventHandler.swift */; };
+		52F5EF75216481BA00321B32 /* SearchFilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF74216481BA00321B32 /* SearchFilterPresenter.swift */; };
 		52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE08121639EAA00C6212E /* AppDelegate.swift */; };
 		52FCE08C21639EAD00C6212E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE08A21639EAD00C6212E /* LaunchScreen.storyboard */; };
 		52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE09621639EAD00C6212E /* SearchFilterTests.swift */; };
 		52FCE0A321639F1000C6212E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE0A221639F1000C6212E /* Assets.xcassets */; };
-		52FCE0AC2163A08600C6212E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0AA2163A08600C6212E /* SearchViewController.swift */; };
-		52FCE0AD2163A08600C6212E /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE0AB2163A08600C6212E /* SearchViewController.xib */; };
-		52FCE0AF2163A08D00C6212E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0AE2163A08D00C6212E /* SearchView.swift */; };
 		52FCE0B12163A11800C6212E /* ProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0B02163A11800C6212E /* ProductItem.swift */; };
-		52FCE0B32163A12500C6212E /* SearchEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0B22163A12500C6212E /* SearchEventHandler.swift */; };
-		52FCE0B52163A13800C6212E /* SearchInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0B42163A13800C6212E /* SearchInteractorIO.swift */; };
-		52FCE0B72163A15100C6212E /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0B62163A15100C6212E /* SearchInteractor.swift */; };
-		52FCE0B92163A17100C6212E /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0B82163A17100C6212E /* SearchPresenter.swift */; };
 		52FCE0BB2163A1B300C6212E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0BA2163A1B300C6212E /* Router.swift */; };
-		52FCE0BD2163A1E000C6212E /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0BC2163A1E000C6212E /* SearchRouter.swift */; };
 		52FCE0C42163A91E00C6212E /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0C32163A91E00C6212E /* SearchService.swift */; };
 		52FCE0C62163AA3A00C6212E /* SearchFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0C52163AA3A00C6212E /* SearchFilter.swift */; };
 		52FCE0C82163ABFA00C6212E /* SearchURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE0C72163ABFA00C6212E /* SearchURL.swift */; };
@@ -70,6 +78,22 @@
 		52F5EF3E2163E8F100321B32 /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
 		52F5EF442164752300321B32 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		52F5EF4621647F3200321B32 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		52F5EF4E216480CF00321B32 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		52F5EF4F216480CF00321B32 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		52F5EF51216480CF00321B32 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		52F5EF5A216480DC00321B32 /* SearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		52F5EF5B216480DC00321B32 /* SearchInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInteractorIO.swift; sourceTree = "<group>"; };
+		52F5EF5F216480E600321B32 /* SearchEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEventHandler.swift; sourceTree = "<group>"; };
+		52F5EF60216480E600321B32 /* SearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		52F5EF64216480FB00321B32 /* SearchFilterRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFilterRouter.swift; sourceTree = "<group>"; };
+		52F5EF662164810100321B32 /* SearchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		52F5EF682164814400321B32 /* SearchFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterView.swift; sourceTree = "<group>"; };
+		52F5EF6A2164816500321B32 /* SearchFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterViewController.swift; sourceTree = "<group>"; };
+		52F5EF6B2164816500321B32 /* SearchFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchFilterViewController.xib; sourceTree = "<group>"; };
+		52F5EF6E2164817700321B32 /* SearchFilterInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterInteractorIO.swift; sourceTree = "<group>"; };
+		52F5EF702164818000321B32 /* SearchFilterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterInteractor.swift; sourceTree = "<group>"; };
+		52F5EF72216481AE00321B32 /* SearchFilterEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterEventHandler.swift; sourceTree = "<group>"; };
+		52F5EF74216481BA00321B32 /* SearchFilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterPresenter.swift; sourceTree = "<group>"; };
 		52FCE07E21639EAA00C6212E /* Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCE08121639EAA00C6212E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FCE08B21639EAD00C6212E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,16 +102,8 @@
 		52FCE09621639EAD00C6212E /* SearchFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterTests.swift; sourceTree = "<group>"; };
 		52FCE09821639EAD00C6212E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FCE0A221639F1000C6212E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		52FCE0AA2163A08600C6212E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		52FCE0AB2163A08600C6212E /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		52FCE0AE2163A08D00C6212E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		52FCE0B02163A11800C6212E /* ProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItem.swift; sourceTree = "<group>"; };
-		52FCE0B22163A12500C6212E /* SearchEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventHandler.swift; sourceTree = "<group>"; };
-		52FCE0B42163A13800C6212E /* SearchInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorIO.swift; sourceTree = "<group>"; };
-		52FCE0B62163A15100C6212E /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
-		52FCE0B82163A17100C6212E /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		52FCE0BA2163A1B300C6212E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		52FCE0BC2163A1E000C6212E /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		52FCE0C32163A91E00C6212E /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		52FCE0C52163AA3A00C6212E /* SearchFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilter.swift; sourceTree = "<group>"; };
 		52FCE0C72163ABFA00C6212E /* SearchURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchURL.swift; sourceTree = "<group>"; };
@@ -187,6 +203,78 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		52F5EF4A2164807200321B32 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				52F5EF662164810100321B32 /* SearchRouter.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		52F5EF4B2164807C00321B32 /* SearchFilter */ = {
+			isa = PBXGroup;
+			children = (
+				52F5EF64216480FB00321B32 /* SearchFilterRouter.swift */,
+			);
+			path = SearchFilter;
+			sourceTree = "<group>";
+		};
+		52F5EF4C216480CF00321B32 /* SearchFilter */ = {
+			isa = PBXGroup;
+			children = (
+				52F5EF682164814400321B32 /* SearchFilterView.swift */,
+				52F5EF6A2164816500321B32 /* SearchFilterViewController.swift */,
+				52F5EF6B2164816500321B32 /* SearchFilterViewController.xib */,
+			);
+			path = SearchFilter;
+			sourceTree = "<group>";
+		};
+		52F5EF4D216480CF00321B32 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				52F5EF4F216480CF00321B32 /* SearchView.swift */,
+				52F5EF4E216480CF00321B32 /* SearchViewController.swift */,
+				52F5EF51216480CF00321B32 /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		52F5EF58216480DC00321B32 /* SearchFilter */ = {
+			isa = PBXGroup;
+			children = (
+				52F5EF6E2164817700321B32 /* SearchFilterInteractorIO.swift */,
+				52F5EF702164818000321B32 /* SearchFilterInteractor.swift */,
+			);
+			path = SearchFilter;
+			sourceTree = "<group>";
+		};
+		52F5EF59216480DC00321B32 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				52F5EF5B216480DC00321B32 /* SearchInteractorIO.swift */,
+				52F5EF5A216480DC00321B32 /* SearchInteractor.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		52F5EF5E216480E600321B32 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				52F5EF5F216480E600321B32 /* SearchEventHandler.swift */,
+				52F5EF60216480E600321B32 /* SearchPresenter.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		52F5EF61216480E600321B32 /* SearchFilter */ = {
+			isa = PBXGroup;
+			children = (
+				52F5EF72216481AE00321B32 /* SearchFilterEventHandler.swift */,
+				52F5EF74216481BA00321B32 /* SearchFilterPresenter.swift */,
+			);
+			path = SearchFilter;
+			sourceTree = "<group>";
+		};
 		52FCE07521639EAA00C6212E = {
 			isa = PBXGroup;
 			children = (
@@ -258,9 +346,8 @@
 		52FCE0A521639F2D00C6212E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				52FCE0AE2163A08D00C6212E /* SearchView.swift */,
-				52FCE0AA2163A08600C6212E /* SearchViewController.swift */,
-				52FCE0AB2163A08600C6212E /* SearchViewController.xib */,
+				52F5EF4D216480CF00321B32 /* Search */,
+				52F5EF4C216480CF00321B32 /* SearchFilter */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,8 +355,8 @@
 		52FCE0A621639F3C00C6212E /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				52FCE0B42163A13800C6212E /* SearchInteractorIO.swift */,
-				52FCE0B62163A15100C6212E /* SearchInteractor.swift */,
+				52F5EF59216480DC00321B32 /* Search */,
+				52F5EF58216480DC00321B32 /* SearchFilter */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -277,8 +364,8 @@
 		52FCE0A721639F4700C6212E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				52FCE0B22163A12500C6212E /* SearchEventHandler.swift */,
-				52FCE0B82163A17100C6212E /* SearchPresenter.swift */,
+				52F5EF5E216480E600321B32 /* Search */,
+				52F5EF61216480E600321B32 /* SearchFilter */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -296,7 +383,8 @@
 			isa = PBXGroup;
 			children = (
 				52FCE0BA2163A1B300C6212E /* Router.swift */,
-				52FCE0BC2163A1E000C6212E /* SearchRouter.swift */,
+				52F5EF4A2164807200321B32 /* Search */,
+				52F5EF4B2164807C00321B32 /* SearchFilter */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -422,8 +510,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				52FCE0A321639F1000C6212E /* Assets.xcassets in Resources */,
+				52F5EF6D2164816500321B32 /* SearchFilterViewController.xib in Resources */,
 				52FCE08C21639EAD00C6212E /* LaunchScreen.storyboard in Resources */,
-				52FCE0AD2163A08600C6212E /* SearchViewController.xib in Resources */,
+				52F5EF56216480CF00321B32 /* SearchViewController.xib in Resources */,
 				52B4C57E2163E26900958A90 /* ProductItemCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,21 +592,28 @@
 			files = (
 				52F5EF3F2163E8F100321B32 /* UICollectionViewCellExtension.swift in Sources */,
 				52FCE0B12163A11800C6212E /* ProductItem.swift in Sources */,
+				52F5EF63216480E600321B32 /* SearchPresenter.swift in Sources */,
+				52F5EF672164810100321B32 /* SearchRouter.swift in Sources */,
+				52F5EF6F2164817700321B32 /* SearchFilterInteractorIO.swift in Sources */,
+				52F5EF73216481AE00321B32 /* SearchFilterEventHandler.swift in Sources */,
+				52F5EF6C2164816500321B32 /* SearchFilterViewController.swift in Sources */,
 				52F5EF452164752300321B32 /* UIImageExtension.swift in Sources */,
+				52F5EF62216480E600321B32 /* SearchEventHandler.swift in Sources */,
 				52B4C57D2163E26900958A90 /* ProductItemCollectionViewCell.swift in Sources */,
+				52F5EF712164818000321B32 /* SearchFilterInteractor.swift in Sources */,
 				52FCE0C62163AA3A00C6212E /* SearchFilter.swift in Sources */,
+				52F5EF692164814400321B32 /* SearchFilterView.swift in Sources */,
 				52F5EF4721647F3200321B32 /* UIColorExtension.swift in Sources */,
-				52FCE0B32163A12500C6212E /* SearchEventHandler.swift in Sources */,
-				52FCE0AC2163A08600C6212E /* SearchViewController.swift in Sources */,
 				52FCE0C42163A91E00C6212E /* SearchService.swift in Sources */,
-				52FCE0AF2163A08D00C6212E /* SearchView.swift in Sources */,
+				52F5EF54216480CF00321B32 /* SearchView.swift in Sources */,
+				52F5EF75216481BA00321B32 /* SearchFilterPresenter.swift in Sources */,
+				52F5EF53216480CF00321B32 /* SearchViewController.swift in Sources */,
 				52FCE0BB2163A1B300C6212E /* Router.swift in Sources */,
 				52B4C5662163D43300958A90 /* ApiError.swift in Sources */,
-				52FCE0B52163A13800C6212E /* SearchInteractorIO.swift in Sources */,
-				52FCE0BD2163A1E000C6212E /* SearchRouter.swift in Sources */,
 				52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */,
-				52FCE0B92163A17100C6212E /* SearchPresenter.swift in Sources */,
-				52FCE0B72163A15100C6212E /* SearchInteractor.swift in Sources */,
+				52F5EF65216480FB00321B32 /* SearchFilterRouter.swift in Sources */,
+				52F5EF5C216480DC00321B32 /* SearchInteractor.swift in Sources */,
+				52F5EF5D216480DC00321B32 /* SearchInteractorIO.swift in Sources */,
 				52FCE0C82163ABFA00C6212E /* SearchURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
