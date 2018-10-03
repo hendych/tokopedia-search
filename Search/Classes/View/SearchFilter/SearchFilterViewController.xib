@@ -19,9 +19,15 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
-        <barButtonItem image="ic_close" landscapeImage="ic_close" style="plain" id="NJx-F9-ENF"/>
+        <barButtonItem image="ic_close" landscapeImage="ic_close" style="plain" id="NJx-F9-ENF">
+            <color key="tintColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <action selector="onButtonCloseClicked" destination="-1" id="gQe-p0-uRB"/>
+            </connections>
+        </barButtonItem>
     </objects>
     <resources>
         <image name="ic_close" width="50" height="50"/>
