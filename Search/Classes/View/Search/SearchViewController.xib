@@ -55,9 +55,9 @@
                 <constraint firstItem="wFi-AG-ecG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8hH-QU-KR8"/>
                 <constraint firstItem="JgV-Z2-zIk" firstAttribute="top" secondItem="wFi-AG-ecG" secondAttribute="bottom" id="AY5-f6-pEE"/>
                 <constraint firstItem="wFi-AG-ecG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="R4H-Ue-M6i"/>
+                <constraint firstItem="JgV-Z2-zIk" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="dcJ-sW-dIs"/>
                 <constraint firstItem="JgV-Z2-zIk" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="eSh-pC-UY1"/>
                 <constraint firstItem="JgV-Z2-zIk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="t8N-tS-djU"/>
-                <constraint firstAttribute="bottom" secondItem="JgV-Z2-zIk" secondAttribute="bottom" id="tOa-Sk-btb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
