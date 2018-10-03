@@ -42,4 +42,11 @@ class SearchFilterViewTests: XCTestCase {
         XCTAssert(view.labelMaxPrice.text == "Rp 10.000",
                   "Expect label min price equals to 'Rp 10.000'")
     }
+
+    func testActionShopTypeClicked() {
+        view.onShopTypeClicked()
+
+        XCTAssert(mockEventHandler?.invokedOnShopTypeClickedCount == 1,
+                  "Expect invoke event handler onShopTypeClicked once")
+    }
 }

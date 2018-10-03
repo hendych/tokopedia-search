@@ -18,4 +18,14 @@ class MockSearchFilterRouter: SearchFilterRouter {
         invokedViewControllerGetterCount += 1
         return stubbedViewController
     }
+    var invokedPushShopTypeViewController = false
+    var invokedPushShopTypeViewControllerCount = 0
+    var invokedPushShopTypeViewControllerParameters: (view: UIViewController?, animated: Bool)?
+    var invokedPushShopTypeViewControllerParametersList = [(view: UIViewController?, animated: Bool)]()
+    override func pushShopTypeViewController(from view: UIViewController?, animated: Bool) {
+        invokedPushShopTypeViewController = true
+        invokedPushShopTypeViewControllerCount += 1
+        invokedPushShopTypeViewControllerParameters = (view, animated)
+        invokedPushShopTypeViewControllerParametersList.append((view, animated))
+    }
 }

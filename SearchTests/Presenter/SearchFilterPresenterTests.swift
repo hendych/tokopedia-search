@@ -33,4 +33,14 @@ class SearchFilterPresenterTests: XCTestCase {
 
         XCTAssert(mockView?.invokedDismissCount == 1, "Expect invoke dismiss once")
     }
+
+    func testHandlerShopTypeClicked() {
+        presenter?.onShopTypeClicked()
+
+        XCTAssert(mockRouter?.invokedPushShopTypeViewControllerCount == 1,
+                  "Expect calling router with pushShopTypeViewController once")
+        XCTAssert(mockRouter?.invokedPushShopTypeViewControllerParameters?
+            .view?.isEqual(mockView) ?? false,
+                  "Expect calling router with pushShopTypeViewController once")
+    }
 }

@@ -16,4 +16,10 @@ class MockSearchFilterEventHandler: SearchFilterEventHandler {
         invokedOnButtonCloseClicked = true
         invokedOnButtonCloseClickedCount += 1
     }
+    var invokedOnShopTypeClicked = false
+    var invokedOnShopTypeClickedCount = 0
+    func onShopTypeClicked() {
+        invokedOnShopTypeClicked = true
+        invokedOnShopTypeClickedCount += 1
+    }
 }

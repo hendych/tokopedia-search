@@ -22,4 +22,11 @@ class SearchFilterRouter: Router {
 
         return navigationController
     }
+
+    func pushShopTypeViewController(from view: UIViewController?, animated: Bool) {
+        let shopTypeRouter = ShopTypeRouter()
+
+        view?.navigationController?.pushViewController(shopTypeRouter.viewController,
+                                                       animated: animated)
+    }
 }

@@ -87,5 +87,6 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     }
 
     @IBAction func onShopTypeClicked() {
+        presenter?.onShopTypeClicked()
     }
 }

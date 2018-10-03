@@ -22,4 +22,8 @@ class SearchFilterPresenter: SearchFilterEventHandler, SearchFilterInteractorOut
     func onButtonCloseClicked() {
         (view as? UIViewController)?.dismiss(animated: true, completion: nil)
     }
+
+    func onShopTypeClicked() {
+        router.pushShopTypeViewController(from: (view as? UIViewController), animated: true)
+    }
 }

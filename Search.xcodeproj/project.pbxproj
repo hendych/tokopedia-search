@@ -52,6 +52,7 @@
 		52F5EF942164D02700321B32 /* ShopTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF932164D02700321B32 /* ShopTypeView.swift */; };
 		52F5EF972164D03900321B32 /* ShopTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF952164D03900321B32 /* ShopTypeViewController.swift */; };
 		52F5EF982164D03900321B32 /* ShopTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F5EF962164D03900321B32 /* ShopTypeViewController.xib */; };
+		52F5EF9A2164D2BA00321B32 /* SearchFilterRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF992164D2BA00321B32 /* SearchFilterRouterTests.swift */; };
 		52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE08121639EAA00C6212E /* AppDelegate.swift */; };
 		52FCE08C21639EAD00C6212E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE08A21639EAD00C6212E /* LaunchScreen.storyboard */; };
 		52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE09621639EAD00C6212E /* SearchFilterTests.swift */; };
@@ -124,6 +125,7 @@
 		52F5EF932164D02700321B32 /* ShopTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeView.swift; sourceTree = "<group>"; };
 		52F5EF952164D03900321B32 /* ShopTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeViewController.swift; sourceTree = "<group>"; };
 		52F5EF962164D03900321B32 /* ShopTypeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopTypeViewController.xib; sourceTree = "<group>"; };
+		52F5EF992164D2BA00321B32 /* SearchFilterRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterRouterTests.swift; sourceTree = "<group>"; };
 		52FCE07E21639EAA00C6212E /* Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCE08121639EAA00C6212E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FCE08B21639EAD00C6212E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				52F5EF772164872000321B32 /* SearchRouterTests.swift */,
+				52F5EF992164D2BA00321B32 /* SearchFilterRouterTests.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 				52F5EF822164977300321B32 /* MockSearchFilterView.swift in Sources */,
 				52B4C5632163CBC700958A90 /* MockSearchService.swift in Sources */,
 				52B4C5702163D8B000958A90 /* SearchPresenterTests.swift in Sources */,
+				52F5EF9A2164D2BA00321B32 /* SearchFilterRouterTests.swift in Sources */,
 				52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */,
 				52B4C5742163D8D600958A90 /* MockSearchView.swift in Sources */,
 				52F5EF84216497A400321B32 /* MockSearchFilterInteractorInput.swift in Sources */,
