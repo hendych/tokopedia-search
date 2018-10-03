@@ -122,4 +122,56 @@ class SearchViewTests: XCTestCase {
                   "Expect number of items is appending with total of 3")
         XCTAssert(view.start == 3, "Expect start is 3 after show result pagination")
     }
+
+    func testOnScrollLoadMoreSearchResultWhenScrolledMoreThanEightyPercent() {
+        let mockData: [[String: Any]] = [
+            ["id": 123, "name": "test", "price": "Rp. 20"],
+            ["id": 234, "name": "test2", "price": "Rp. 30"]
+        ]
+        var results = [ProductItem]()
+        for data in mockData {
+            guard let item = ProductItem(json: data) else {
+                XCTFail("Failed when creating product item")
+
+                return
+            }
+
+            results.append(item)
+        }
+        let initialSearchFilter = SearchFilter()
+        let dummyScrollView = UIScrollView(frame: UIScreen.main.bounds)
+        dummyScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width,
+                                             height: UIScreen.main.bounds.height * 2)
+        dummyScrollView.contentOffset = CGPoint(x: 0, y: dummyScrollView.contentSize.height)
+
+        // Show initial data
+        view.showSearchResults(searchResults: results, nextPage: 2)
+
+        view.scrollViewDidScroll(dummyScrollView)
+
+        XCTAssert(view.isLoading == true,
+                  "Expect isLoading is true when requestSearch")
+        XCTAssert(mockEventHandler?.invokedOnRequestSearchCount == 1,
+                  "Expect invoke request search result once")
+        XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.filter == initialSearchFilter,
+                  "Expect requestSearch invoked with default search filter")
+        XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.start == 2,
+                  "Expect requestSearch invoked with start 2")
+        XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.num == 10,
+                  "Expect requestSearch invoked with num 10")
+    }
+
+    func testOnScrollLoadMoreSearchResultWhenScrolledLessThanEightyPercent() {
+        let dummyScrollView = UIScrollView(frame: UIScreen.main.bounds)
+        dummyScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width,
+                                             height: UIScreen.main.bounds.height * 2)
+        dummyScrollView.contentOffset = CGPoint(x: 0, y: 30)
+
+        view.scrollViewDidScroll(dummyScrollView)
+
+        XCTAssert(view.isLoading == false,
+                  "Expect isLoading is false")
+        XCTAssert(mockEventHandler?.invokedOnRequestSearch == false,
+                  "Expect invoke request search result not called")
+    }
 }

@@ -11,6 +11,7 @@ import UIKit
 private struct Constants {
     static let numOfItemPerPage = 10
     static let paddingItem: CGFloat = 1
+    static let percentScrollLoadMore: CGFloat = 0.8
 }
 
 class SearchViewController: UIViewController, SearchView {
@@ -113,5 +114,13 @@ UICollectionViewDelegateFlowLayout {
 
     // Load more event
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let percentScrolled = (scrollView.contentOffset.y + UIScreen.main.bounds.size.height)
+            / scrollView.contentSize.height
+        if isLoading == false, percentScrolled >= Constants.percentScrollLoadMore {
+            isLoading = true
+            presenter?.onRequestSearch(withFilter: filter,
+                                       start: start,
+                                       num: Constants.numOfItemPerPage)
+        }
     }
 }
