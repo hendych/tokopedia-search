@@ -15,7 +15,7 @@ private struct Constants {
     static let minSliderValue: Float = 10000
     static let maxSliderValue: Float = 1000000
     static let defaultUpperSliderValue: Float = 800000
-    static let sliderStep: Float = 40000
+    static let sliderStep: Float = 10
 }
 
 class SearchFilterViewController: UIViewController, SearchFilterView {
@@ -76,8 +76,10 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
         numberFormatter.groupingSeparator = "."
         numberFormatter.numberStyle = .decimal
 
-        let minNumberString = numberFormatter.string(from: NSNumber(value: sender.lowerValue)) ?? ""
-        let maxNumberString = numberFormatter.string(from: NSNumber(value: sender.upperValue)) ?? ""
+        let minInt = Int(sender.lowerValue)
+        let maxInt = Int(sender.upperValue)
+        let minNumberString = numberFormatter.string(from: NSNumber(value: minInt)) ?? ""
+        let maxNumberString = numberFormatter.string(from: NSNumber(value: maxInt)) ?? ""
 
         labelMinPrice.text = "Rp \(minNumberString)"
         labelMaxPrice.text = "Rp \(maxNumberString)"
