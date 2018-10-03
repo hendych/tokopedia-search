@@ -59,7 +59,8 @@ class SearchViewController: UIViewController, SearchView {
         navigationItem.title = "Search"
 
         // Button filter
-        buttonFilter.setImage(UIImage.backgroundImage(withColor: .lightGreen), for: .normal)
+        buttonFilter.setBackgroundImage(UIImage.backgroundImage(withColor: .lightGreen),
+                                        for: .normal)
     }
 
     // MARK: - Search View
