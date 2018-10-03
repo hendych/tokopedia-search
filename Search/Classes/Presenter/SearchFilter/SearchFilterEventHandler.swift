@@ -9,4 +9,5 @@
 import Foundation
 
 protocol SearchFilterEventHandler: class {
+    func onButtonCloseClicked()
 }
