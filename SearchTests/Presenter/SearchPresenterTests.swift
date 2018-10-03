@@ -49,27 +49,37 @@ class SearchPresenterTests: XCTestCase {
             results.append(item)
         }
 
-        presenter?.foundSearchResult(results: results, nextPage: 20)
+        presenter?.foundSearchResult(results: results, nextPage: 2)
 
         XCTAssert(mockView?.invokedShowSearchResultsCount == 1,
                   "Expect showSearchResults called once")
         XCTAssert(mockView?.invokedShowSearchResultsParameters?.searchResults == results,
                   "Expect showSearchResults invoked with parameter results")
-        XCTAssert(mockView?.invokedShowSearchResultsParameters?.nextPage == 20,
-                  "Expect showSearchResults invoked with parameter next page 20")
+        XCTAssert(mockView?.invokedShowSearchResultsParameters?.nextPage == 2,
+                  "Expect showSearchResults invoked with parameter next page 2")
     }
 
     func testHandleEventOnRequestSearch() {
         let searchFilter = SearchFilter(minPrice: "0", maxPrice: "20", wholesale: true,
                                         official: true, fshop: "1")
-        presenter?.onRequestSearch(withFilter: searchFilter, start: 1, num: 30)
+        presenter?.onRequestSearch(withFilter: searchFilter, start: 1, num: 1)
 
         XCTAssert(mockInteractor?.invokedRequestSearchCount == 1, "Expect requestSearch called once")
         XCTAssert(mockInteractor?.invokedRequestSearchParameters?.filter == searchFilter,
                   "Expected search filter parameter sent is not same!")
-        XCTAssert(mockInteractor?.invokedRequestSearchParameters?.num == 30,
+        XCTAssert(mockInteractor?.invokedRequestSearchParameters?.num == 1,
                   "Expected num parameter sent is not same!")
         XCTAssert(mockInteractor?.invokedRequestSearchParameters?.start == 1,
                   "Expected num parameter start is not same!")
+    }
+
+    func testEventOnButtonClicked() {
+        presenter?.onButtonFilterClicked()
+
+        XCTAssert(mockRouter?.invokedPresentSearchFilterViewCount == 1,
+                  "Expect router to invoke presentSearchFilterView once")
+        XCTAssert(mockRouter?.invokedPresentSearchFilterViewParameters?.view?
+            .isEqual(mockView) ?? false,
+                  "Expect parameter sent is the same view injected from presenter")
     }
 }

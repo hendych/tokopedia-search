@@ -84,6 +84,7 @@ class SearchViewController: UIViewController, SearchView {
 
     // MARK: - Button Action
     @IBAction func onButtonFilterClicked() {
+        presenter?.onButtonFilterClicked()
     }
 }
 

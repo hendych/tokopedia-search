@@ -20,4 +20,10 @@ class MockSearchEventHandler: SearchEventHandler {
         invokedOnRequestSearchParameters = (filter, start, num)
         invokedOnRequestSearchParametersList.append((filter, start, num))
     }
+    var invokedOnButtonFilterClicked = false
+    var invokedOnButtonFilterClickedCount = 0
+    func onButtonFilterClicked() {
+        invokedOnButtonFilterClicked = true
+        invokedOnButtonFilterClickedCount += 1
+    }
 }

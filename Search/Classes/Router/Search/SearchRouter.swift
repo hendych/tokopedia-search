@@ -22,4 +22,10 @@ class SearchRouter: Router {
 
         return navigationController
     }
+
+    func presentSearchFilterView(onView view: UIViewController?) {
+        let searchFilterRouter = SearchFilterRouter()
+
+        view?.present(searchFilterRouter.viewController, animated: true, completion: nil)
+    }
 }

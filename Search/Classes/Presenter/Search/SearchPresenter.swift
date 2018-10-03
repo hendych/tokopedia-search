@@ -6,7 +6,7 @@
 //  Copyright © 2018 Hendy Christianto. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class SearchPresenter: SearchEventHandler, SearchInteractorOutput {
     weak var view: SearchView?
@@ -21,6 +21,10 @@ class SearchPresenter: SearchEventHandler, SearchInteractorOutput {
     // MARK: - SearchEventHandler
     func onRequestSearch(withFilter filter: SearchFilter, start: Int, num: Int) {
         interactor.requestSearch(withFilter: filter, start: start, num: num)
+    }
+
+    func onButtonFilterClicked() {
+        router.presentSearchFilterView(onView: view as? UIViewController)
     }
 
     // MARK: - SearchInteractorOutput

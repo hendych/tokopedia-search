@@ -18,4 +18,15 @@ class MockSearchRouter: SearchRouter {
         invokedViewControllerGetterCount += 1
         return stubbedViewController
     }
+    var invokedPresentSearchFilterView = false
+    var invokedPresentSearchFilterViewCount = 0
+    var invokedPresentSearchFilterViewParameters: (view: UIViewController?, Void)?
+    var invokedPresentSearchFilterViewParametersList = [(view: UIViewController?, Void)]()
+    override func presentSearchFilterView(onView view: UIViewController?) {
+        invokedPresentSearchFilterView = true
+        invokedPresentSearchFilterViewCount += 1
+        invokedPresentSearchFilterViewParameters = (view, ())
+        invokedPresentSearchFilterViewParametersList.append((view, ()))
+        super.presentSearchFilterView(onView: view)
+    }
 }

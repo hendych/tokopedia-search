@@ -10,15 +10,16 @@ import UIKit
 
 class SearchFilterRouter: Router {
 
-    var viewController: UIViewController {
+    var viewController: UINavigationController {
         let view = SearchFilterViewController()
         let interactor = SearchFilterInteractor()
         let presenter = SearchFilterPresenter(interactor: interactor, router: self)
+        let navigationController = UINavigationController(rootViewController: view)
 
         presenter.view = view
         view.presenter = presenter
         interactor.output = presenter
 
-        return view
+        return navigationController
     }
 }
