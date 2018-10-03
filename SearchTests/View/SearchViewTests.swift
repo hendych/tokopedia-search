@@ -62,7 +62,7 @@ class SearchViewTests: XCTestCase {
                   "Expect isLoading is false when show search result called")
         XCTAssert(view.collectionView.numberOfItems(inSection: 0) == results.count,
                   "Expect number of items is the same with results.")
-        XCTAssert(view.start == 4, "Expect start is 4 after show result")
+        XCTAssert(view.start == 3, "Expect start is 3 after show result")
 
         guard let cell = view.collectionView(view.collectionView, cellForItemAt: indexPath)
             as? ProductItemCollectionViewCell else {
@@ -78,6 +78,7 @@ class SearchViewTests: XCTestCase {
         XCTAssert(cell.labelPrice.text == results[0].price,
                   "Expect price shown on cell index 0 is same with results on index 0")
     }
+
 
     func testOnScrollLoadMoreSearchResultWhenScrolledMoreThanEightyPercent() {
         let mockData: [[String: Any]] = [
@@ -111,8 +112,8 @@ class SearchViewTests: XCTestCase {
                   "Expect invoke request search result once")
         XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.filter == initialSearchFilter,
                   "Expect requestSearch invoked with default search filter")
-        XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.start == 3,
-                  "Expect requestSearch invoked with start 3")
+        XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.start == 2,
+                  "Expect requestSearch invoked with start 2")
         XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.num == 10,
                   "Expect requestSearch invoked with num 10")
     }
