@@ -21,6 +21,7 @@ class SearchViewController: UIViewController, SearchView {
     private(set) var filter = SearchFilter()
     private(set) var start = 0
     private(set) var searchResults = [ProductItem]()
+    private(set) var isLoading = false
 
     // MARK: - Initializer
     init() {
@@ -37,6 +38,7 @@ class SearchViewController: UIViewController, SearchView {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        isLoading = true
         presenter?.onRequestSearch(withFilter: filter, start: 0, num: Constants.numOfItemPerPage)
     }
 
@@ -58,6 +60,8 @@ class SearchViewController: UIViewController, SearchView {
         self.start = nextPage
 
         collectionView.reloadData()
+
+        isLoading = false
     }
 }
 

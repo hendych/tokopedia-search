@@ -25,6 +25,8 @@ class SearchViewTests: XCTestCase {
 
         view.viewWillAppear(false)
 
+        XCTAssert(view.isLoading == true,
+                  "Expect isLoading is true when requestSearch")
         XCTAssert(mockEventHandler?.invokedOnRequestSearchCount == 1,
                   "Expect invoke requestSearch once")
         XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.filter == initialSearchFilter,
@@ -56,6 +58,8 @@ class SearchViewTests: XCTestCase {
 
         view.showSearchResults(searchResults: results, nextPage: 10)
 
+        XCTAssert(view.isLoading == false,
+                  "Expect isLoading is false when show search result called")
         XCTAssert(view.collectionView.numberOfItems(inSection: 0) == results.count,
                   "Expect number of items is the same with results.")
         XCTAssert(view.start == 10, "Expect start is 10 after show result")
@@ -110,6 +114,8 @@ class SearchViewTests: XCTestCase {
         view.showSearchResults(searchResults: results1, nextPage: 2)
         view.showSearchResults(searchResults: results2, nextPage: 3)
 
+        XCTAssert(view.isLoading == false,
+                  "Expect isLoading is false when show search result called")
         XCTAssert(view.collectionView.numberOfItems(inSection: 0) == results1.count + results2.count,
                   "Expect number of items is appending with total of 3")
         XCTAssert(view.collectionView.numberOfItems(inSection: 0) == results1.count + results2.count,
