@@ -37,6 +37,7 @@
 		52F5EF712164818000321B32 /* SearchFilterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF702164818000321B32 /* SearchFilterInteractor.swift */; };
 		52F5EF73216481AE00321B32 /* SearchFilterEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF72216481AE00321B32 /* SearchFilterEventHandler.swift */; };
 		52F5EF75216481BA00321B32 /* SearchFilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF74216481BA00321B32 /* SearchFilterPresenter.swift */; };
+		52F5EF782164872000321B32 /* SearchRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF772164872000321B32 /* SearchRouterTests.swift */; };
 		52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE08121639EAA00C6212E /* AppDelegate.swift */; };
 		52FCE08C21639EAD00C6212E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE08A21639EAD00C6212E /* LaunchScreen.storyboard */; };
 		52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE09621639EAD00C6212E /* SearchFilterTests.swift */; };
@@ -94,6 +95,7 @@
 		52F5EF702164818000321B32 /* SearchFilterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterInteractor.swift; sourceTree = "<group>"; };
 		52F5EF72216481AE00321B32 /* SearchFilterEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterEventHandler.swift; sourceTree = "<group>"; };
 		52F5EF74216481BA00321B32 /* SearchFilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterPresenter.swift; sourceTree = "<group>"; };
+		52F5EF772164872000321B32 /* SearchRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouterTests.swift; sourceTree = "<group>"; };
 		52FCE07E21639EAA00C6212E /* Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCE08121639EAA00C6212E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FCE08B21639EAD00C6212E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -275,6 +277,14 @@
 			path = SearchFilter;
 			sourceTree = "<group>";
 		};
+		52F5EF762164870600321B32 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				52F5EF772164872000321B32 /* SearchRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		52FCE07521639EAA00C6212E = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +325,7 @@
 				52FCE0D92163C7CD00C6212E /* Interactor */,
 				52B4C56E2163D8B000958A90 /* Presenter */,
 				52FCE0CB2163B50200C6212E /* Entity */,
+				52F5EF762164870600321B32 /* Router */,
 				52FCE09821639EAD00C6212E /* Info.plist */,
 			);
 			path = SearchTests;
@@ -626,6 +637,7 @@
 				52FCE0D82163C2ED00C6212E /* ProductItemsTests.swift in Sources */,
 				52B4C5612163CA6000958A90 /* MockSearchInteractorOutput.swift in Sources */,
 				52B4C5722163D8B700958A90 /* MockSearchRouter.swift in Sources */,
+				52F5EF782164872000321B32 /* SearchRouterTests.swift in Sources */,
 				52B4C55F2163C9A700958A90 /* MockSearchInteractorInput.swift in Sources */,
 				52B4C5632163CBC700958A90 /* MockSearchService.swift in Sources */,
 				52B4C5702163D8B000958A90 /* SearchPresenterTests.swift in Sources */,

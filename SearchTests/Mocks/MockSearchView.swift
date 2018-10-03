@@ -21,4 +21,14 @@ class MockSearchView: SearchViewController {
         invokedShowSearchResultsParametersList.append((searchResults, nextPage))
         super.showSearchResults(searchResults: searchResults, nextPage: nextPage)
     }
+    var invokedPresent = false
+    var invokedPresentCount = 0
+    var invokedPresentParameters: (viewControllerToPresent: UIViewController, animated: Bool)?
+    var invokedPresentParametersList = [(viewControllerToPresent: UIViewController, animated: Bool)]()
+    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+        invokedPresent = true
+        invokedPresentCount += 1
+        invokedPresentParameters = (viewControllerToPresent, flag)
+        invokedPresentParametersList.append((viewControllerToPresent, flag))
+    }
 }
