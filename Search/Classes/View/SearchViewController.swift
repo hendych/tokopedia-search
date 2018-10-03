@@ -54,8 +54,8 @@ class SearchViewController: UIViewController, SearchView {
 
     // MARK: - Search View
     func showSearchResults(searchResults: [ProductItem], nextPage: Int) {
-        self.searchResults = searchResults
-        self.start += nextPage
+        self.searchResults.append(contentsOf: searchResults)
+        self.start = nextPage
 
         collectionView.reloadData()
     }
@@ -105,5 +105,9 @@ UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return Constants.paddingItem
+    }
+
+    // Load more event
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
     }
 }

@@ -74,4 +74,46 @@ class SearchViewTests: XCTestCase {
         XCTAssert(cell.labelPrice.text == results[0].price,
                   "Expect price shown on cell index 0 is same with results on index 0")
     }
+
+    func testShowSearchResultsPagination() {
+        let mockData1: [[String: Any]] = [
+            ["id": 123, "name": "test", "price": "Rp. 20"],
+            ["id": 234, "name": "test2", "price": "Rp. 30"]
+        ]
+
+        let mockData2: [[String: Any]] = [
+            ["id": 2345, "name": "test3", "price": "Rp. 40"]
+        ]
+
+        var results1 = [ProductItem]()
+        var results2 = [ProductItem]()
+        for data in mockData1 {
+            guard let item = ProductItem(json: data) else {
+                XCTFail("Failed when creating product item")
+
+                return
+            }
+
+            results1.append(item)
+        }
+
+        for data in mockData2 {
+            guard let item = ProductItem(json: data) else {
+                XCTFail("Failed when creating product item")
+
+                return
+            }
+
+            results2.append(item)
+        }
+
+        view.showSearchResults(searchResults: results1, nextPage: 2)
+        view.showSearchResults(searchResults: results2, nextPage: 3)
+
+        XCTAssert(view.collectionView.numberOfItems(inSection: 0) == results1.count + results2.count,
+                  "Expect number of items is appending with total of 3")
+        XCTAssert(view.collectionView.numberOfItems(inSection: 0) == results1.count + results2.count,
+                  "Expect number of items is appending with total of 3")
+        XCTAssert(view.start == 3, "Expect start is 3 after show result pagination")
+    }
 }
