@@ -57,12 +57,20 @@ class SearchViewController: UIViewController, SearchView {
 
     // MARK: - Search View
     func showSearchResults(searchResults: [ProductItem], nextPage: Int) {
-        self.searchResults.append(contentsOf: searchResults)
-        self.start = nextPage
+        collectionView.performBatchUpdates({
+            var indexPaths = [IndexPath]()
 
-        collectionView.reloadData()
+            for row in start..<nextPage {
+                self.searchResults.append(searchResults[row])
 
-        isLoading = false
+                indexPaths.append(IndexPath(row: row, section: 0))
+            }
+
+            collectionView.insertItems(at: indexPaths)
+        }, completion: nil)
+
+        self.isLoading = false
+        self.start = nextPage + 1
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 private struct Constants {
     static let paddingBottomCell: CGFloat = 87.5
@@ -33,6 +34,13 @@ class ProductItemCollectionViewCell: UICollectionViewCell {
     // MARK: - Render View
     private func renderView() {
         guard let productItem = productItem else { return }
+
+        imageViewProduct.image = UIImage.backgroundImage(withColor: .lightGray)
+        imageViewProduct.af_cancelImageRequest()
+
+        if let url = URL(string: productItem.imageUri) {
+            imageViewProduct.af_setImage(withURL: url)
+        }
 
         labelName.text = productItem.name
         labelPrice.text = productItem.price

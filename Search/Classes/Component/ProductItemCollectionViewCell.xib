@@ -20,7 +20,6 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="05S-qf-Ko7">
                         <rect key="frame" x="8" y="8" width="171.5" height="161.5"/>
-                        <color key="backgroundColor" red="0.80784313730000001" green="0.80784313730000001" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="05S-qf-Ko7" secondAttribute="height" multiplier="173:163" id="cVG-F9-eJ7"/>
                         </constraints>

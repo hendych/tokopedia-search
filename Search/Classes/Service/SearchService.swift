@@ -14,7 +14,9 @@ class SearchService {
     func requestSearch(_ filter: SearchFilter, start: Int, rows: Int,
                        completion: @escaping Completion) {
 
-        let param = filter.toJson()
+        var param = filter.toJson()
+        param["start"] = start
+        param["rows"] = rows
 
         let request = SessionManager.default.request(SearchURL.search(parameters: param)).validate()
 

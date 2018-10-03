@@ -56,13 +56,13 @@ class SearchViewTests: XCTestCase {
             results.append(item)
         }
 
-        view.showSearchResults(searchResults: results, nextPage: 10)
+        view.showSearchResults(searchResults: results, nextPage: 3)
 
         XCTAssert(view.isLoading == false,
                   "Expect isLoading is false when show search result called")
         XCTAssert(view.collectionView.numberOfItems(inSection: 0) == results.count,
                   "Expect number of items is the same with results.")
-        XCTAssert(view.start == 10, "Expect start is 10 after show result")
+        XCTAssert(view.start == 4, "Expect start is 4 after show result")
 
         guard let cell = view.collectionView(view.collectionView, cellForItemAt: indexPath)
             as? ProductItemCollectionViewCell else {
@@ -77,50 +77,6 @@ class SearchViewTests: XCTestCase {
                   "Expect name shown on cell index 0 is same with results on index 0")
         XCTAssert(cell.labelPrice.text == results[0].price,
                   "Expect price shown on cell index 0 is same with results on index 0")
-    }
-
-    func testShowSearchResultsPagination() {
-        let mockData1: [[String: Any]] = [
-            ["id": 123, "name": "test", "price": "Rp. 20"],
-            ["id": 234, "name": "test2", "price": "Rp. 30"]
-        ]
-
-        let mockData2: [[String: Any]] = [
-            ["id": 2345, "name": "test3", "price": "Rp. 40"]
-        ]
-
-        var results1 = [ProductItem]()
-        var results2 = [ProductItem]()
-        for data in mockData1 {
-            guard let item = ProductItem(json: data) else {
-                XCTFail("Failed when creating product item")
-
-                return
-            }
-
-            results1.append(item)
-        }
-
-        for data in mockData2 {
-            guard let item = ProductItem(json: data) else {
-                XCTFail("Failed when creating product item")
-
-                return
-            }
-
-            results2.append(item)
-        }
-
-        view.showSearchResults(searchResults: results1, nextPage: 2)
-        view.showSearchResults(searchResults: results2, nextPage: 3)
-
-        XCTAssert(view.isLoading == false,
-                  "Expect isLoading is false when show search result called")
-        XCTAssert(view.collectionView.numberOfItems(inSection: 0) == results1.count + results2.count,
-                  "Expect number of items is appending with total of 3")
-        XCTAssert(view.collectionView.numberOfItems(inSection: 0) == results1.count + results2.count,
-                  "Expect number of items is appending with total of 3")
-        XCTAssert(view.start == 3, "Expect start is 3 after show result pagination")
     }
 
     func testOnScrollLoadMoreSearchResultWhenScrolledMoreThanEightyPercent() {
@@ -155,8 +111,8 @@ class SearchViewTests: XCTestCase {
                   "Expect invoke request search result once")
         XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.filter == initialSearchFilter,
                   "Expect requestSearch invoked with default search filter")
-        XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.start == 2,
-                  "Expect requestSearch invoked with start 2")
+        XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.start == 3,
+                  "Expect requestSearch invoked with start 3")
         XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.num == 10,
                   "Expect requestSearch invoked with num 10")
     }
