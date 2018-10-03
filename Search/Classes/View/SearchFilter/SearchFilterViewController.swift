@@ -26,6 +26,7 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     @IBOutlet weak var labelMinPrice: UILabel!
     @IBOutlet weak var labelMaxPrice: UILabel!
     @IBOutlet weak var slider: NMRangeSlider!
+    @IBOutlet weak var switchWholesale: UISwitch!
 
     // MARK: - Initializer
     init() {
@@ -83,5 +84,8 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
 
         labelMinPrice.text = "Rp \(minNumberString)"
         labelMaxPrice.text = "Rp \(maxNumberString)"
+    }
+
+    @IBAction func onShopTypeClicked() {
     }
 }
