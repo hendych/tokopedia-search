@@ -58,8 +58,12 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
                                                               size: Constants.trackSliderSize)
         slider.minimumValue = Constants.minSliderValue
         slider.maximumValue = Constants.maxSliderValue
-        slider.stepValue = Constants.sliderStep
         slider.upperValue = Constants.defaultUpperSliderValue
+        slider.lowerValue = Constants.minSliderValue
+        slider.stepValue = Constants.sliderStep
+
+        // Set initial price
+        onSliderValueChanged(slider)
     }
 
     // MARK: - Action
@@ -67,6 +71,15 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
         presenter?.onButtonCloseClicked()
     }
 
-    @IBAction func onSliderValueChanged() {
+    @IBAction func onSliderValueChanged(_ sender: NMRangeSlider) {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.groupingSeparator = "."
+        numberFormatter.numberStyle = .decimal
+
+        let minNumberString = numberFormatter.string(from: NSNumber(value: sender.lowerValue)) ?? ""
+        let maxNumberString = numberFormatter.string(from: NSNumber(value: sender.upperValue)) ?? ""
+
+        labelMinPrice.text = "Rp \(minNumberString)"
+        labelMaxPrice.text = "Rp \(maxNumberString)"
     }
 }

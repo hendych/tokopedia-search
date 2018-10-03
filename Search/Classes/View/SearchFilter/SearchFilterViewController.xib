@@ -87,6 +87,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="rOe-aM-Djp"/>
                                             </constraints>
+                                            <connections>
+                                                <action selector="onSliderValueChanged:" destination="-1" eventType="valueChanged" id="DqC-9q-G6a"/>
+                                            </connections>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
