@@ -18,6 +18,7 @@ class SearchViewController: UIViewController, SearchView {
     var presenter: SearchEventHandler?
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var buttonFilter: UIButton!
 
     private(set) var filter = SearchFilter()
     private(set) var start = 0
@@ -56,6 +57,9 @@ class SearchViewController: UIViewController, SearchView {
 
         // Add title
         navigationItem.title = "Search"
+
+        // Button filter
+        buttonFilter.setImage(UIImage.backgroundImage(withColor: .lightGreen), for: .normal)
     }
 
     // MARK: - Search View
@@ -76,6 +80,10 @@ class SearchViewController: UIViewController, SearchView {
 
         self.isLoading = false
         self.start = nextPage
+    }
+
+    // MARK: - Button Action
+    @IBAction func onButtonFilterClicked() {
     }
 }
 

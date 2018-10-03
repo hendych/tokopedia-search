@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Search" customModuleProvider="target">
             <connections>
+                <outlet property="buttonFilter" destination="JgV-Z2-zIk" id="ZMw-Rx-Slf"/>
                 <outlet property="collectionView" destination="wFi-AG-ecG" id="Ugv-Jy-5pG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wFi-AG-ecG">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="587"/>
                     <color key="backgroundColor" red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h1K-td-w8X">
                         <size key="itemSize" width="50" height="50"/>
@@ -34,16 +35,32 @@
                         <outlet property="delegate" destination="-1" id="b9j-pg-d1a"/>
                     </connections>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgV-Z2-zIk">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="nuS-qt-66K"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <state key="normal" title="Filter">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onButtonFilterClicked" destination="-1" eventType="touchUpInside" id="7z7-cb-R4N"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="wFi-AG-ecG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="2vo-MU-rsm"/>
                 <constraint firstItem="wFi-AG-ecG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8hH-QU-KR8"/>
+                <constraint firstItem="JgV-Z2-zIk" firstAttribute="top" secondItem="wFi-AG-ecG" secondAttribute="bottom" id="AY5-f6-pEE"/>
                 <constraint firstItem="wFi-AG-ecG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="R4H-Ue-M6i"/>
-                <constraint firstItem="wFi-AG-ecG" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="YXM-1J-vv0"/>
+                <constraint firstItem="JgV-Z2-zIk" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="eSh-pC-UY1"/>
+                <constraint firstItem="JgV-Z2-zIk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="t8N-tS-djU"/>
+                <constraint firstAttribute="bottom" secondItem="JgV-Z2-zIk" secondAttribute="bottom" id="tOa-Sk-btb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="138.40000000000001" y="153.37331334332833"/>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
         </view>
     </objects>
 </document>

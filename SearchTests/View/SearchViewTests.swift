@@ -79,7 +79,6 @@ class SearchViewTests: XCTestCase {
                   "Expect price shown on cell index 0 is same with results on index 0")
     }
 
-
     func testOnScrollLoadMoreSearchResultWhenScrolledMoreThanEightyPercent() {
         let mockData: [[String: Any]] = [
             ["id": 123, "name": "test", "price": "Rp. 20"],

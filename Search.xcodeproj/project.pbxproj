@@ -20,6 +20,7 @@
 		52B4C57E2163E26900958A90 /* ProductItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B4C57C2163E26900958A90 /* ProductItemCollectionViewCell.xib */; };
 		52F5EF3F2163E8F100321B32 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF3E2163E8F100321B32 /* UICollectionViewCellExtension.swift */; };
 		52F5EF452164752300321B32 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF442164752300321B32 /* UIImageExtension.swift */; };
+		52F5EF4721647F3200321B32 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF4621647F3200321B32 /* UIColorExtension.swift */; };
 		52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE08121639EAA00C6212E /* AppDelegate.swift */; };
 		52FCE08C21639EAD00C6212E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE08A21639EAD00C6212E /* LaunchScreen.storyboard */; };
 		52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE09621639EAD00C6212E /* SearchFilterTests.swift */; };
@@ -68,6 +69,7 @@
 		52B4C57C2163E26900958A90 /* ProductItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		52F5EF3E2163E8F100321B32 /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
 		52F5EF442164752300321B32 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		52F5EF4621647F3200321B32 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		52FCE07E21639EAA00C6212E /* Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCE08121639EAA00C6212E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FCE08B21639EAD00C6212E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				52F5EF3E2163E8F100321B32 /* UICollectionViewCellExtension.swift */,
 				52F5EF442164752300321B32 /* UIImageExtension.swift */,
+				52F5EF4621647F3200321B32 /* UIColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				52F5EF452164752300321B32 /* UIImageExtension.swift in Sources */,
 				52B4C57D2163E26900958A90 /* ProductItemCollectionViewCell.swift in Sources */,
 				52FCE0C62163AA3A00C6212E /* SearchFilter.swift in Sources */,
+				52F5EF4721647F3200321B32 /* UIColorExtension.swift in Sources */,
 				52FCE0B32163A12500C6212E /* SearchEventHandler.swift in Sources */,
 				52FCE0AC2163A08600C6212E /* SearchViewController.swift in Sources */,
 				52FCE0C42163A91E00C6212E /* SearchService.swift in Sources */,
