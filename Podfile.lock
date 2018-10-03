@@ -2,20 +2,24 @@ PODS:
   - Alamofire (4.7.3)
   - AlamofireImage (3.4.1):
     - Alamofire (~> 4.7)
+  - NMRangeSlider (1.2.1)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage (~> 3.4)
+  - NMRangeSlider
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - NMRangeSlider
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
+  NMRangeSlider: 317ded652431eb90501c8421d9cddc3930d891e6
 
-PODFILE CHECKSUM: 813ab4b3f6b670ef70daae24846357de261ece94
+PODFILE CHECKSUM: bd1fafbf831dc5a9bb09db851c6991afe57329d0
 
 COCOAPODS: 1.5.3

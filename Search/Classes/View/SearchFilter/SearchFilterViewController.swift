@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import NMRangeSlider
 
 class SearchFilterViewController: UIViewController, SearchFilterView {
     var presenter: SearchFilterEventHandler?
 
     @IBOutlet var buttonClose: UIBarButtonItem!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var containerSlider: UIView!
+    @IBOutlet weak var labelMinPrice: UILabel!
+    @IBOutlet weak var labelMaxPrice: UILabel!
 
     // MARK: - Initializer
     init() {
@@ -34,6 +39,12 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     private func configureUI() {
         // Close Button
         self.navigationItem.leftBarButtonItem = buttonClose
+
+        // Configure slider
+        let slider = NMRangeSlider(frame: containerSlider.bounds)
+        slider.lowerHandleImageNormal = UIImage(named: "ic_thumb")
+        slider.upperHandleImageNormal = UIImage(named: "ic_thumb")
+        containerSlider.addSubview(slider)
     }
 
     // MARK: - Button Action

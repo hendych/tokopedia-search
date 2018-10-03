@@ -8,6 +8,7 @@ target 'Search' do
   # Pods for Search
   pod 'Alamofire'
   pod 'AlamofireImage', '~> 3.4'
+  pod 'NMRangeSlider'
 
   target 'SearchTests' do
     inherit! :search_paths
