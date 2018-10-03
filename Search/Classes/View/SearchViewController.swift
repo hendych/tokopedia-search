@@ -53,6 +53,9 @@ class SearchViewController: UIViewController, SearchView {
         collectionView.register(UINib(nibName: ProductItemCollectionViewCell.identifier(),
                                       bundle: nil),
                                 forCellWithReuseIdentifier: ProductItemCollectionViewCell.identifier())
+
+        // Add title
+        navigationItem.title = "Search"
     }
 
     // MARK: - Search View
