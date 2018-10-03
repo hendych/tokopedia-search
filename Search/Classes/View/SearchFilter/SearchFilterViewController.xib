@@ -12,10 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchFilterViewController" customModule="Search" customModuleProvider="target">
             <connections>
                 <outlet property="buttonClose" destination="NJx-F9-ENF" id="Ijf-Na-vgM"/>
-                <outlet property="containerSlider" destination="pRP-5B-y6D" id="jNJ-Eq-Cno"/>
                 <outlet property="labelMaxPrice" destination="ZKw-ZZ-ESy" id="aQc-Al-cs8"/>
                 <outlet property="labelMinPrice" destination="I1J-Rp-w3L" id="s6e-ad-Dg6"/>
                 <outlet property="scrollView" destination="PgZ-UP-ETQ" id="Kks-bL-gZs"/>
+                <outlet property="slider" destination="pRP-5B-y6D" id="ix5-XQ-WO9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -81,7 +81,7 @@
                                                 <constraint firstAttribute="height" constant="0.67000000000000004" id="dRk-59-iOG"/>
                                             </constraints>
                                         </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRP-5B-y6D">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRP-5B-y6D" customClass="NMRangeSlider">
                                             <rect key="frame" x="10" y="69" width="355" height="40"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>

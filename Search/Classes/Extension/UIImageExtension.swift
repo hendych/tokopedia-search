@@ -10,8 +10,10 @@ import UIKit
 
 extension UIImage {
     static func backgroundImage(withColor color: UIColor) -> UIImage? {
-        let size = CGSize(width: 40, height: 40)
+        return backgroundImage(withColor: color, size: CGSize(width: 40, height: 40))
+    }
 
+    static func backgroundImage(withColor color: UIColor, size: CGSize) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, true, 0)
         guard let context = UIGraphicsGetCurrentContext() else {
             return nil
