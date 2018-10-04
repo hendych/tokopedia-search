@@ -87,25 +87,36 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     func addShopType(shopType: ShopType) {
         let circularView = CircularLabelView(text: shopType.rawValue)
 
-        shopTypeContainer.addSubview(circularView)
-
         var originX = Constants.padding
         var originY = Constants.defaultOriginYShopType
-        if let lastView = shopTypeContainer.subviews.last {
+
+        var lastCircularView: CircularLabelView?
+
+        for subview in shopTypeContainer.subviews {
+            if let circular = subview as? CircularLabelView {
+                lastCircularView = circular
+            }
+        }
+
+        if let lastView = lastCircularView {
             // There is existing view, get the view origin and width
             originX = lastView.frame.origin.x + lastView.frame.size.width
                 + Constants.padding
 
             let visibleHorizontalScreen = UIScreen.main.bounds.width - Constants.padding
-            let circularHorizontalLocation = circularView.frame.origin.x
-                + circularView.frame.size.width
+            let circularHorizontalLocation = originX + circularView.frame.size.width
 
             if circularHorizontalLocation > visibleHorizontalScreen {
+                originX = Constants.padding
                 originY = lastView.frame.origin.y + lastView.frame.size.height
+                    + Constants.padding
+
+                shopTypeContainer.frame.size.height += circularView.frame.size.height
                     + Constants.padding
             }
         }
 
+        shopTypeContainer.addSubview(circularView)
         circularView.frame.origin = CGPoint(x: originX, y: originY)
     }
 
