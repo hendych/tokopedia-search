@@ -8,14 +8,19 @@
 
 import UIKit
 
+protocol ShopTypeViewDelegate: class {
+    func onShopTypeDidCheck(type shopType: ShopType)
+}
+
 class ShopTypeViewController: UIViewController, ShopTypeView {
+    weak var delegate: ShopTypeViewDelegate?
     var presenter: ShopTypeEventHandler?
 
     @IBOutlet weak var tableView: UITableView!
 
-    let shopTypeData: [[String: Bool]] = [
-        ["Gold Merchant": false],
-        ["Official Store": false]
+    let shopTypeData: [[ShopType: Bool]] = [
+        [.goldMerchant: false],
+        [.officialStore: false]
     ]
 
     // MARK: - Life cycle
@@ -59,7 +64,7 @@ extension ShopTypeViewController: UITableViewDelegate, UITableViewDataSource {
         switch cell {
         case is CheckBoxTableViewCell:
             guard let cell = cell as? CheckBoxTableViewCell else { return }
-            cell.labelTitle.text = shopTypeData[indexPath.row].keys.first
+            cell.labelTitle.text = shopTypeData[indexPath.row].keys.first?.rawValue
         default:
             break
         }

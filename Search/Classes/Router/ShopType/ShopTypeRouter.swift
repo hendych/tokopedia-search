@@ -15,10 +15,18 @@ class ShopTypeRouter: Router {
         let interactor = ShopTypeInteractor()
         let presenter = ShopTypePresenter(interactor: interactor, router: self)
 
+        view.delegate = delegate
+
         presenter.view = view
         view.presenter = presenter
         interactor.output = presenter
 
         return view
+    }
+
+    private weak var delegate: ShopTypeViewDelegate?
+
+    init(delegate: ShopTypeViewDelegate?) {
+        self.delegate = delegate
     }
 }

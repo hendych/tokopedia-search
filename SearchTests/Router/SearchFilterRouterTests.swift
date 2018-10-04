@@ -19,7 +19,17 @@ class SearchFilterRouterTests: XCTestCase {
         router.pushShopTypeViewController(from: mockSearchFilterView, animated: false)
 
         XCTAssert(navController.viewControllers.count == 2, "Expect navigation controller stack is 2")
-        XCTAssert(navController.viewControllers.last is ShopTypeViewController,
-                  "Expect search view is presenting ShopTypeViewController")
+
+        guard let shopTypeView = navController.viewControllers.last
+            as? ShopTypeViewController else {
+                XCTFail("Expect search view is presenting ShopTypeViewController")
+
+                return
+        }
+
+        XCTAssert((shopTypeView.delegate as? SearchFilterViewController)?
+            .isEqual(mockSearchFilterView) ?? false,
+                  "Expect delegate is assigned to SearchFilterViewController")
+
     }
 }

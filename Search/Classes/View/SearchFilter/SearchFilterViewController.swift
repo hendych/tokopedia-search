@@ -112,3 +112,9 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
         delegate?.searchFilterDidApply(newFilter: searchFilter)
     }
 }
+
+// MARK: - ShopTypeViewDelegate
+extension SearchFilterViewController: ShopTypeViewDelegate {
+    func onShopTypeDidCheck(type shopType: ShopType) {
+    }
+}

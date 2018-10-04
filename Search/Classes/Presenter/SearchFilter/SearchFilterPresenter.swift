@@ -24,6 +24,7 @@ class SearchFilterPresenter: SearchFilterEventHandler, SearchFilterInteractorOut
     }
 
     func onShopTypeClicked() {
-        router.pushShopTypeViewController(from: (view as? UIViewController), animated: true)
+        router.pushShopTypeViewController(from: (view as? SearchFilterViewController),
+                                          animated: true)
     }
 }
