@@ -18,6 +18,10 @@ class CheckBoxTableViewCell: UITableViewCell {
         return 56
     }
 
+    override func awakeFromNib() {
+        selectionStyle = .none
+    }
+
     // MARK: - Button Action
     @IBAction func buttonCheckBoxOnClick() {
         buttonCheckbox.isSelected = !buttonCheckbox.isSelected
