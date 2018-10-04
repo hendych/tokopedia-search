@@ -174,6 +174,10 @@ class SearchViewTests: XCTestCase {
         view.searchFilterDidApply(newFilter: dummySearchFilter)
 
         XCTAssert(view.filter == dummySearchFilter, "Expect new filter is applied.")
+        XCTAssert(view.start == 0,
+                  "Expect when new search filter applied, start is 0")
+        XCTAssert(view.collectionView.numberOfItems(inSection: 0) == 0,
+                  "Expect when new search filter applied, collection view is empty")
         XCTAssert(view.searchResults.isEmpty,
                   "Expect when new search filter applied, search result is empty.")
         XCTAssert(view.isLoading == true,
