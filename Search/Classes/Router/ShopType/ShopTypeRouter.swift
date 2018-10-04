@@ -11,7 +11,7 @@ import UIKit
 class ShopTypeRouter: Router {
 
     var viewController: UIViewController {
-        let view = ShopTypeViewController()
+        let view = ShopTypeViewController(initialShopType: initialShopType)
         let interactor = ShopTypeInteractor()
         let presenter = ShopTypePresenter(interactor: interactor, router: self)
 
@@ -25,8 +25,10 @@ class ShopTypeRouter: Router {
     }
 
     private weak var delegate: ShopTypeViewDelegate?
+    private var initialShopType: [ShopType]?
 
-    init(delegate: ShopTypeViewDelegate?) {
+    init(initialShopType: [ShopType]?, delegate: ShopTypeViewDelegate?) {
         self.delegate = delegate
+        self.initialShopType = initialShopType
     }
 }

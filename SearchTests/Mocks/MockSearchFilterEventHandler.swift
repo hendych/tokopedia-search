@@ -18,8 +18,12 @@ class MockSearchFilterEventHandler: SearchFilterEventHandler {
     }
     var invokedOnShopTypeClicked = false
     var invokedOnShopTypeClickedCount = 0
-    func onShopTypeClicked() {
+    var invokedOnShopTypeClickedParameters: (initialShopType: [ShopType]?, Void)?
+    var invokedOnShopTypeClickedParametersList = [(initialShopType: [ShopType]?, Void)]()
+    func onShopTypeClicked(initialShopType: [ShopType]?) {
         invokedOnShopTypeClicked = true
         invokedOnShopTypeClickedCount += 1
+        invokedOnShopTypeClickedParameters = (initialShopType, ())
+        invokedOnShopTypeClickedParametersList.append((initialShopType, ()))
     }
 }

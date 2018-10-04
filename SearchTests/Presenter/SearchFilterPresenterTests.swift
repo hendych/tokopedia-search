@@ -35,10 +35,14 @@ class SearchFilterPresenterTests: XCTestCase {
     }
 
     func testHandlerShopTypeClicked() {
-        presenter?.onShopTypeClicked()
+        let initialShopType = [ShopType.officialStore]
+        presenter?.onShopTypeClicked(initialShopType: initialShopType)
 
         XCTAssert(mockRouter?.invokedPushShopTypeViewControllerCount == 1,
                   "Expect calling router with pushShopTypeViewController once")
+        XCTAssert(mockRouter?.invokedPushShopTypeViewControllerParameters?
+            .initialShopType == initialShopType,
+                  "Expected parameter initial shop type is not same")
         XCTAssert(mockRouter?.invokedPushShopTypeViewControllerParameters?
             .view?.isEqual(mockView) ?? false,
                   "Expect calling router with pushShopTypeViewController once")

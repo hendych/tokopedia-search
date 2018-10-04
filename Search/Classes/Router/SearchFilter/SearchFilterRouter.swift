@@ -31,8 +31,11 @@ class SearchFilterRouter: Router {
         self.delegate = delegate
     }
 
-    func pushShopTypeViewController(from view: SearchFilterViewController?, animated: Bool) {
-        let shopTypeRouter = ShopTypeRouter(delegate: view)
+    func pushShopTypeViewController(from view: SearchFilterViewController?,
+                                    initialShopType: [ShopType]?,
+                                    animated: Bool) {
+        let shopTypeRouter = ShopTypeRouter(initialShopType: initialShopType,
+                                            delegate: view)
 
         view?.navigationController?.pushViewController(shopTypeRouter.viewController,
                                                        animated: animated)

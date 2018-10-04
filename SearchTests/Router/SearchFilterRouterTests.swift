@@ -13,10 +13,14 @@ class SearchFilterRouterTests: XCTestCase {
     let router = SearchFilterRouter(delegate: nil)
 
     func testPushShopTypeView() {
+        let expectedShopTypeData = [ShopType.goldMerchant: true,
+                                     ShopType.officialStore: false]
         let mockSearchFilterView = MockSearchFilterView()
         let navController = UINavigationController(rootViewController: mockSearchFilterView)
 
-        router.pushShopTypeViewController(from: mockSearchFilterView, animated: false)
+        router.pushShopTypeViewController(from: mockSearchFilterView,
+                                          initialShopType: [ShopType.goldMerchant],
+                                          animated: false)
 
         XCTAssert(navController.viewControllers.count == 2, "Expect navigation controller stack is 2")
 
@@ -26,6 +30,9 @@ class SearchFilterRouterTests: XCTestCase {
 
                 return
         }
+
+        XCTAssert(shopTypeView.shopTypeData == expectedShopTypeData,
+                  "Expect initial shop type is assigned.")
 
         XCTAssert((shopTypeView.delegate as? SearchFilterViewController)?
             .isEqual(mockSearchFilterView) ?? false,

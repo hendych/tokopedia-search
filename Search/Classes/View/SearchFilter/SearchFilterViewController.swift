@@ -179,7 +179,20 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     }
 
     @IBAction func onShopTypeClicked() {
-        presenter?.onShopTypeClicked()
+        var shopTypes: [ShopType]?
+        for subview in shopTypeContainer.subviews {
+            if let circularView = subview as? CircularLabelView {
+                if shopTypes == nil {
+                    shopTypes = [ShopType]()
+                }
+
+                if let shopType = ShopType(rawValue: circularView.text) {
+                    shopTypes?.append(shopType)
+                }
+            }
+        }
+
+        presenter?.onShopTypeClicked(initialShopType: shopTypes)
     }
 
     @IBAction func onButtonApplyClicked() {

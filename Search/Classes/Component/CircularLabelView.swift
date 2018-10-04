@@ -75,7 +75,7 @@ class CircularLabelView: UIView {
 
     @objc func onButtonDeleteClicked() {
         guard let shopType = ShopType(rawValue: text) else { return }
-        
+
         delegate?.onShopTypeDidUncheck(type: shopType)
     }
 }

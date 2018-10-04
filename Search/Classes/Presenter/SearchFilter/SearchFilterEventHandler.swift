@@ -11,5 +11,5 @@ import Foundation
 protocol SearchFilterEventHandler: class {
     func onButtonCloseClicked()
 
-    func onShopTypeClicked()
+    func onShopTypeClicked(initialShopType: [ShopType]?)
 }
