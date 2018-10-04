@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShopTypeViewController" customModule="Search" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="fOk-wW-3go" id="Iwq-kA-Qad"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +19,26 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fOk-wW-3go">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="separatorInset" minX="45" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="1hV-ov-ooi"/>
+                        <outlet property="delegate" destination="-1" id="OHW-nD-ZCq"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fOk-wW-3go" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="J7O-jp-MRS"/>
+                <constraint firstItem="fOk-wW-3go" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JgA-ae-EY6"/>
+                <constraint firstItem="fOk-wW-3go" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ZTk-iu-edF"/>
+                <constraint firstItem="fOk-wW-3go" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aGQ-ny-c58"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="115.59220389805098"/>
         </view>
     </objects>
 </document>
