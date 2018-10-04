@@ -86,6 +86,7 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     // MARK: - SearchFilterView
     func addShopType(shopType: ShopType) {
         let circularView = CircularLabelView(text: shopType.rawValue)
+        circularView.delegate = self
 
         var originX = Constants.padding
         var originY = Constants.defaultOriginYShopType

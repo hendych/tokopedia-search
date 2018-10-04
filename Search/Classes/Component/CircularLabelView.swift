@@ -16,6 +16,8 @@ private struct Constants {
 }
 
 class CircularLabelView: UIView {
+    weak var delegate: ShopTypeViewDelegate?
+
     private(set) var labelTitle = UILabel()
     private(set) var buttonDelete = UIButton(type: .custom)
 
@@ -61,10 +63,19 @@ class CircularLabelView: UIView {
         buttonDelete.setBackgroundImage(UIImage.backgroundImage(withColor: .brokenWhite),
                                         for: .normal)
         buttonDelete.circular(withBorderColor: .thinGray)
+        buttonDelete.addTarget(self,
+                               action: #selector(self.onButtonDeleteClicked),
+                               for: .touchUpInside)
 
         self.backgroundColor = .white
         self.frame.size = CGSize(width: originXButton + buttonDelete.frame.size.width,
                                  height: Constants.viewHeight)
         self.circular(withBorderColor: .thinGray)
+    }
+
+    @objc func onButtonDeleteClicked() {
+        guard let shopType = ShopType(rawValue: text) else { return }
+        
+        delegate?.onShopTypeDidUncheck(type: shopType)
     }
 }
