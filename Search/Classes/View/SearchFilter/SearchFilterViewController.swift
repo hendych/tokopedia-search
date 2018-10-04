@@ -18,7 +18,12 @@ private struct Constants {
     static let sliderStep: Float = 10
 }
 
+protocol SearchFilterViewDelegate: class {
+    func searchFilterDidApply(newFilter filter: SearchFilter)
+}
+
 class SearchFilterViewController: UIViewController, SearchFilterView {
+    weak var delegate: SearchFilterViewDelegate?
     var presenter: SearchFilterEventHandler?
 
     @IBOutlet var buttonClose: UIBarButtonItem!
@@ -27,6 +32,7 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     @IBOutlet weak var labelMaxPrice: UILabel!
     @IBOutlet weak var slider: NMRangeSlider!
     @IBOutlet weak var switchWholesale: UISwitch!
+    @IBOutlet weak var buttonApply: UIButton!
 
     // MARK: - Initializer
     init() {
@@ -88,5 +94,14 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
 
     @IBAction func onShopTypeClicked() {
         presenter?.onShopTypeClicked()
+    }
+
+    @IBAction func onButtonApplyClicked() {
+        let searchFilter = SearchFilter(minPrice: String(format: "%.0f", slider.lowerValue),
+                                        maxPrice: String(format: "%.0f", slider.upperValue),
+                                        wholesale: switchWholesale.isOn,
+                                        official: false, fshop: "2")
+
+        delegate?.searchFilterDidApply(newFilter: searchFilter)
     }
 }

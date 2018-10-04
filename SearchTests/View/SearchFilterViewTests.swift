@@ -49,4 +49,32 @@ class SearchFilterViewTests: XCTestCase {
         XCTAssert(mockEventHandler?.invokedOnShopTypeClickedCount == 1,
                   "Expect invoke event handler onShopTypeClicked once")
     }
+
+    func testActionButtonApplyClicked() {
+        let mockDelegate = MockSearchFilterDelegate()
+
+        view.delegate = mockDelegate
+
+        view.slider.maximumValue = 10000
+        view.slider.minimumValue = 10
+        view.slider.upperValue = 10000
+        view.slider.lowerValue = 2000
+
+        view.switchWholesale.isOn = true
+
+        let expectedSearchFilter = SearchFilter(minPrice: "2000",
+                                                maxPrice: "10000",
+                                                wholesale: true,
+                                                official: false,
+                                                fshop: "2")
+
+        view.onButtonApplyClicked()
+
+        XCTAssert(mockDelegate.invokedSearchFilterDidApplyCount == 1,
+                  "Expect delegate invoked with searchFilterDidApply once")
+
+        XCTAssert(mockDelegate.invokedSearchFilterDidApplyParameters?
+            .filter == expectedSearchFilter,
+                  "Expected search filter sent through delegate is not same")
+    }
 }
