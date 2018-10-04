@@ -58,6 +58,8 @@
 		52F5EFA02166302E00321B32 /* CheckBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F5EF9E2166302E00321B32 /* CheckBoxTableViewCell.xib */; };
 		52F5EFA22166343300321B32 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EFA12166343300321B32 /* UITableViewCellExtension.swift */; };
 		52F5EFA4216639ED00321B32 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EFA3216639ED00321B32 /* Theme.swift */; };
+		52F5EFA621665C3100321B32 /* CircularLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EFA521665C3100321B32 /* CircularLabelView.swift */; };
+		52F5EFAA2166615700321B32 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EFA92166615700321B32 /* UIViewExtension.swift */; };
 		52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE08121639EAA00C6212E /* AppDelegate.swift */; };
 		52FCE08C21639EAD00C6212E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE08A21639EAD00C6212E /* LaunchScreen.storyboard */; };
 		52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE09621639EAD00C6212E /* SearchFilterTests.swift */; };
@@ -136,6 +138,8 @@
 		52F5EF9E2166302E00321B32 /* CheckBoxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxTableViewCell.xib; sourceTree = "<group>"; };
 		52F5EFA12166343300321B32 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		52F5EFA3216639ED00321B32 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		52F5EFA521665C3100321B32 /* CircularLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLabelView.swift; sourceTree = "<group>"; };
+		52F5EFA92166615700321B32 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		52FCE07E21639EAA00C6212E /* Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCE08121639EAA00C6212E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FCE08B21639EAD00C6212E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 				52B4C57C2163E26900958A90 /* ProductItemCollectionViewCell.xib */,
 				52F5EF9D2166302E00321B32 /* CheckBoxTableViewCell.swift */,
 				52F5EF9E2166302E00321B32 /* CheckBoxTableViewCell.xib */,
+				52F5EFA521665C3100321B32 /* CircularLabelView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				52F5EF442164752300321B32 /* UIImageExtension.swift */,
 				52F5EF4621647F3200321B32 /* UIColorExtension.swift */,
 				52F5EFA12166343300321B32 /* UITableViewCellExtension.swift */,
+				52F5EFA92166615700321B32 /* UIViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -701,6 +707,7 @@
 				52F5EF3F2163E8F100321B32 /* UICollectionViewCellExtension.swift in Sources */,
 				52FCE0B12163A11800C6212E /* ProductItem.swift in Sources */,
 				52F5EF63216480E600321B32 /* SearchPresenter.swift in Sources */,
+				52F5EFAA2166615700321B32 /* UIViewExtension.swift in Sources */,
 				52F5EF672164810100321B32 /* SearchRouter.swift in Sources */,
 				52F5EF6F2164817700321B32 /* SearchFilterInteractorIO.swift in Sources */,
 				52F5EF73216481AE00321B32 /* SearchFilterEventHandler.swift in Sources */,
@@ -720,6 +727,7 @@
 				52F5EF54216480CF00321B32 /* SearchView.swift in Sources */,
 				52F5EF9F2166302E00321B32 /* CheckBoxTableViewCell.swift in Sources */,
 				52F5EF75216481BA00321B32 /* SearchFilterPresenter.swift in Sources */,
+				52F5EFA621665C3100321B32 /* CircularLabelView.swift in Sources */,
 				52F5EF53216480CF00321B32 /* SearchViewController.swift in Sources */,
 				52F5EF922164CFF700321B32 /* ShopTypeInteractor.swift in Sources */,
 				52FCE0BB2163A1B300C6212E /* Router.swift in Sources */,
