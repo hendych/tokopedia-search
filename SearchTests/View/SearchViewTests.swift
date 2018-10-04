@@ -137,4 +137,22 @@ class SearchViewTests: XCTestCase {
         XCTAssert(mockEventHandler?.invokedOnButtonFilterClickedCount == 1,
                   "Expect invoke event handler onButtonFilterClicked once")
     }
+
+    func testReceiveNewSearchFilter() {
+        let dummySearchFilter = SearchFilter(minPrice: "10",
+                                             maxPrice: "20",
+                                             wholesale: true,
+                                             official: false,
+                                             fshop: "2")
+        let dummySearchFilterView = SearchFilterViewController()
+
+        // Present search filter view first (test scenario)
+        view.present(dummySearchFilterView, animated: false) {
+            self.view.searchFilterDidApply(newFilter: dummySearchFilter)
+
+            XCTAssert(self.view.filter == dummySearchFilter, "Expect new filter is applied.")
+            XCTAssert(self.view.presentingViewController?.isBeingDismissed == true,
+                      "Expect presented search filter is being dismissed.")
+        }
+    }
 }

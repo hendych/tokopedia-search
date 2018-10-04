@@ -152,5 +152,7 @@ UICollectionViewDelegateFlowLayout {
 extension SearchViewController: SearchFilterViewDelegate {
     func searchFilterDidApply(newFilter filter: SearchFilter) {
         self.filter = filter
+
+        presentedViewController?.dismiss(animated: true, completion: nil)
     }
 }
