@@ -150,5 +150,12 @@ extension SearchViewController: SearchFilterViewDelegate {
         self.filter = filter
 
         presentedViewController?.dismiss(animated: true, completion: nil)
+
+        searchResults = [ProductItem]()
+
+        isLoading = true
+        presenter?.onRequestSearch(withFilter: filter,
+                                   start: 0,
+                                   num: Constants.numOfItemPerPage)
     }
 }

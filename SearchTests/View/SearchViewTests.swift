@@ -144,15 +144,37 @@ class SearchViewTests: XCTestCase {
                                              wholesale: true,
                                              official: false,
                                              fshop: "2")
-        let dummySearchFilterView = SearchFilterViewController()
 
-        // Present search filter view first (test scenario)
-        view.present(dummySearchFilterView, animated: false) {
-            self.view.searchFilterDidApply(newFilter: dummySearchFilter)
+        let mockData: [[String: Any]] = [
+            ["id": 123, "name": "test", "price": "Rp. 20"],
+            ["id": 234, "name": "test2", "price": "Rp. 30"]
+        ]
+        var results = [ProductItem]()
+        for data in mockData {
+            guard let item = ProductItem(json: data) else {
+                XCTFail("Failed when creating product item")
 
-            XCTAssert(self.view.filter == dummySearchFilter, "Expect new filter is applied.")
-            XCTAssert(self.view.presentingViewController?.isBeingDismissed == true,
-                      "Expect presented search filter is being dismissed.")
+                return
+            }
+
+            results.append(item)
         }
+
+        // Fill up data first
+        view.showSearchResults(searchResults: results, nextPage: 2)
+
+        view.searchFilterDidApply(newFilter: dummySearchFilter)
+
+        XCTAssert(view.filter == dummySearchFilter, "Expect new filter is applied.")
+        XCTAssert(view.searchResults.isEmpty,
+                  "Expect when new search filter applied, search result is empty.")
+        XCTAssert(view.isLoading == true,
+                  "Expect isLoading is true when requestSearch")
+        XCTAssert(mockEventHandler?.invokedOnRequestSearchCount == 1,
+                  "Expect when new search filter applied, invoke api request once")
+        XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.start == 0,
+                  "Expect requestSearch invoked with start 0")
+        XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.num == 10,
+                  "Expect requestSearch invoked with num 10")
     }
 }
