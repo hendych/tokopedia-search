@@ -10,4 +10,6 @@ import Foundation
 
 protocol SearchFilterView: class {
     func addShopType(shopType: ShopType)
+
+    func removeShopType(shopType: ShopType)
 }

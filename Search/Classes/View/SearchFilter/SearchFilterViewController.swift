@@ -109,6 +109,38 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
         circularView.frame.origin = CGPoint(x: originX, y: originY)
     }
 
+    func removeShopType(shopType: ShopType) {
+        var circularViews = [CircularLabelView]()
+        for subview in shopTypeContainer.subviews {
+            if let circularView = subview as? CircularLabelView {
+                circularViews.append(circularView)
+            }
+        }
+
+        var removedCircularView: CircularLabelView?
+        var previousOriginX: CGFloat = 0
+        var previousOriginY: CGFloat = 0
+        for index in 0..<circularViews.count {
+            let circularView = circularViews[index]
+            if circularView.text == shopType.rawValue {
+                // Remove
+                removedCircularView = circularView
+
+                previousOriginX = circularView.frame.origin.x
+                previousOriginY = circularView.frame.origin.y
+
+                continue
+            }
+
+            if removedCircularView != nil {
+                circularView.frame.origin.x = previousOriginX
+                circularView.frame.origin.y = previousOriginY
+            }
+        }
+
+        removedCircularView?.removeFromSuperview()
+    }
+
     // MARK: - Action
     @IBAction func onButtonCloseClicked() {
         presenter?.onButtonCloseClicked()
@@ -145,6 +177,7 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
 // MARK: - ShopTypeViewDelegate
 extension SearchFilterViewController: ShopTypeViewDelegate {
     func onShopTypeDidUncheck(type shopType: ShopType) {
+        removeShopType(shopType: shopType)
     }
 
     func onShopTypeDidCheck(type shopType: ShopType) {
