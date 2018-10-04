@@ -37,17 +37,13 @@ class SearchViewController: UIViewController, SearchView {
     }
 
     // MARK: - Life Cycle
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        isLoading = true
-        presenter?.onRequestSearch(withFilter: filter, start: 0, num: Constants.numOfItemPerPage)
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
+
+        isLoading = true
+        presenter?.onRequestSearch(withFilter: filter, start: 0, num: Constants.numOfItemPerPage)
     }
 
     private func configureUI() {

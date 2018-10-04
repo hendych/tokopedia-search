@@ -20,10 +20,10 @@ class SearchViewTests: XCTestCase {
         view.presenter = mockEventHandler
     }
 
-    func testOnViewWillAppearRequestSearch() {
+    func testOnViewDidLoadRequestSearch() {
         let initialSearchFilter = SearchFilter()
 
-        view.viewWillAppear(false)
+        view.viewDidLoad()
 
         XCTAssert(view.isLoading == true,
                   "Expect isLoading is true when requestSearch")
