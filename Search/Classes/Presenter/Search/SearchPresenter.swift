@@ -24,7 +24,7 @@ class SearchPresenter: SearchEventHandler, SearchInteractorOutput {
     }
 
     func onButtonFilterClicked() {
-        router.presentSearchFilterView(onView: view as? UIViewController, animated: true)
+        router.presentSearchFilterView(onView: view as? SearchViewController, animated: true)
     }
 
     // MARK: - SearchInteractorOutput

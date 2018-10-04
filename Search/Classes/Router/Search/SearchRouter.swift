@@ -23,8 +23,8 @@ class SearchRouter: Router {
         return navigationController
     }
 
-    func presentSearchFilterView(onView view: UIViewController?, animated: Bool) {
-        let searchFilterRouter = SearchFilterRouter()
+    func presentSearchFilterView(onView view: SearchViewController?, animated: Bool) {
+        let searchFilterRouter = SearchFilterRouter(delegate: view)
 
         view?.present(searchFilterRouter.viewController, animated: animated, completion: nil)
     }

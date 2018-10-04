@@ -17,7 +17,7 @@ class SearchFilterPresenterTests: XCTestCase {
     var presenter: SearchFilterPresenter?
 
     override func setUp() {
-        let router = MockSearchFilterRouter()
+        let router = MockSearchFilterRouter(delegate: nil)
         let interactor = MockSearchFilterInteractorInput()
 
         mockView = MockSearchFilterView()

@@ -147,3 +147,10 @@ UICollectionViewDelegateFlowLayout {
         }
     }
 }
+
+// MARK: - SearchFilterViewDelegate
+extension SearchViewController: SearchFilterViewDelegate {
+    func searchFilterDidApply(newFilter filter: SearchFilter) {
+        self.filter = filter
+    }
+}

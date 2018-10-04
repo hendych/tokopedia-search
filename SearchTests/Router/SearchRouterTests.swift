@@ -28,7 +28,15 @@ class SearchRouterTests: XCTestCase {
                 return
         }
 
-        XCTAssert(navController.viewControllers.first is SearchFilterViewController,
-                  "Expect search view is presenting SearchFilterViewController")
+        guard let searchFilterView = navController.viewControllers.first
+            as? SearchFilterViewController else {
+                XCTFail("Expect search view is presenting SearchFilterViewController")
+
+                return
+        }
+
+        XCTAssert((searchFilterView.delegate as? SearchViewController)?
+            .isEqual(mockSearchView) ?? false,
+                  "Expect delegate is assigned to search view")
     }
 }

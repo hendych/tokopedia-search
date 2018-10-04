@@ -16,11 +16,19 @@ class SearchFilterRouter: Router {
         let presenter = SearchFilterPresenter(interactor: interactor, router: self)
         let navigationController = UINavigationController(rootViewController: view)
 
+        view.delegate = delegate
+
         presenter.view = view
         view.presenter = presenter
         interactor.output = presenter
 
         return navigationController
+    }
+
+    private weak var delegate: SearchFilterViewDelegate?
+
+    init(delegate: SearchFilterViewDelegate?) {
+        self.delegate = delegate
     }
 
     func pushShopTypeViewController(from view: UIViewController?, animated: Bool) {

@@ -10,7 +10,7 @@ import XCTest
 @testable import Search
 
 class SearchFilterRouterTests: XCTestCase {
-    let router = SearchFilterRouter()
+    let router = SearchFilterRouter(delegate: nil)
 
     func testPushShopTypeView() {
         let mockSearchFilterView = MockSearchFilterView()
