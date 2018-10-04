@@ -16,6 +16,8 @@ private struct Constants {
     static let maxSliderValue: Float = 1000000
     static let defaultUpperSliderValue: Float = 800000
     static let sliderStep: Float = 10
+    static let padding: CGFloat = 10
+    static let defaultOriginYShopType: CGFloat = 40
 }
 
 protocol SearchFilterViewDelegate: class {
@@ -33,6 +35,7 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     @IBOutlet weak var slider: NMRangeSlider!
     @IBOutlet weak var switchWholesale: UISwitch!
     @IBOutlet weak var buttonApply: UIButton!
+    @IBOutlet weak var shopTypeContainer: UIView!
 
     // MARK: - Initializer
     init() {
@@ -80,6 +83,32 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
         onSliderValueChanged(slider)
     }
 
+    // MARK: - SearchFilterView
+    func addShopType(shopType: ShopType) {
+        let circularView = CircularLabelView(text: shopType.rawValue)
+
+        shopTypeContainer.addSubview(circularView)
+
+        var originX = Constants.padding
+        var originY = Constants.defaultOriginYShopType
+        if let lastView = shopTypeContainer.subviews.last {
+            // There is existing view, get the view origin and width
+            originX = lastView.frame.origin.x + lastView.frame.size.width
+                + Constants.padding
+
+            let visibleHorizontalScreen = UIScreen.main.bounds.width - Constants.padding
+            let circularHorizontalLocation = circularView.frame.origin.x
+                + circularView.frame.size.width
+
+            if circularHorizontalLocation > visibleHorizontalScreen {
+                originY = lastView.frame.origin.y + lastView.frame.size.height
+                    + Constants.padding
+            }
+        }
+
+        circularView.frame.origin = CGPoint(x: originX, y: originY)
+    }
+
     // MARK: - Action
     @IBAction func onButtonCloseClicked() {
         presenter?.onButtonCloseClicked()
@@ -119,5 +148,6 @@ extension SearchFilterViewController: ShopTypeViewDelegate {
     }
 
     func onShopTypeDidCheck(type shopType: ShopType) {
+        addShopType(shopType: shopType)
     }
 }

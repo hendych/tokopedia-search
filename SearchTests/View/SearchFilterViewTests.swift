@@ -77,4 +77,33 @@ class SearchFilterViewTests: XCTestCase {
             .filter == expectedSearchFilter,
                   "Expected search filter sent through delegate is not same")
     }
+
+    func testAddShopType() {
+        let shopType = ShopType.goldMerchant
+
+        view.addShopType(shopType: shopType)
+
+        var circularView: CircularLabelView?
+        var numOfCircularView = 0
+        for subview in view.shopTypeContainer.subviews {
+            if let circular = subview as? CircularLabelView {
+                circularView = circular
+
+                numOfCircularView += 1
+            }
+        }
+
+        guard let circular = circularView else {
+            XCTFail("Shop type container expected to have child CircularLabelView.")
+            return
+        }
+
+        XCTAssert(numOfCircularView == 1, "Expect subview of circular view is only 1")
+
+        XCTAssert(circular.text == shopType.rawValue,
+                  "Expect circular view text has the same value of input shop type")
+    }
+
+    func testRemoveCircularView() {
+    }
 }
