@@ -57,6 +57,7 @@
 		52F5EF9F2166302E00321B32 /* CheckBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EF9D2166302E00321B32 /* CheckBoxTableViewCell.swift */; };
 		52F5EFA02166302E00321B32 /* CheckBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F5EF9E2166302E00321B32 /* CheckBoxTableViewCell.xib */; };
 		52F5EFA22166343300321B32 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EFA12166343300321B32 /* UITableViewCellExtension.swift */; };
+		52F5EFA4216639ED00321B32 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EFA3216639ED00321B32 /* Theme.swift */; };
 		52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE08121639EAA00C6212E /* AppDelegate.swift */; };
 		52FCE08C21639EAD00C6212E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE08A21639EAD00C6212E /* LaunchScreen.storyboard */; };
 		52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE09621639EAD00C6212E /* SearchFilterTests.swift */; };
@@ -134,6 +135,7 @@
 		52F5EF9D2166302E00321B32 /* CheckBoxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxTableViewCell.swift; sourceTree = "<group>"; };
 		52F5EF9E2166302E00321B32 /* CheckBoxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxTableViewCell.xib; sourceTree = "<group>"; };
 		52F5EFA12166343300321B32 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		52F5EFA3216639ED00321B32 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		52FCE07E21639EAA00C6212E /* Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCE08121639EAA00C6212E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FCE08B21639EAD00C6212E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				52FCE08121639EAA00C6212E /* AppDelegate.swift */,
+				52F5EFA3216639ED00321B32 /* Theme.swift */,
 				52FCE08A21639EAD00C6212E /* LaunchScreen.storyboard */,
 				52FCE0A421639F1E00C6212E /* Classes */,
 				52FCE0A121639EF000C6212E /* Resources */,
@@ -721,6 +724,7 @@
 				52F5EF922164CFF700321B32 /* ShopTypeInteractor.swift in Sources */,
 				52FCE0BB2163A1B300C6212E /* Router.swift in Sources */,
 				52B4C5662163D43300958A90 /* ApiError.swift in Sources */,
+				52F5EFA4216639ED00321B32 /* Theme.swift in Sources */,
 				52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */,
 				52F5EF65216480FB00321B32 /* SearchFilterRouter.swift in Sources */,
 				52F5EF5C216480DC00321B32 /* SearchInteractor.swift in Sources */,

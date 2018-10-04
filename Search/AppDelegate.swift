@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         window = UIWindow(frame: UIScreen.main.bounds)
+
+        Theme.apply()
+
         window?.rootViewController = SearchRouter().viewController
         window?.makeKeyAndVisible()
 

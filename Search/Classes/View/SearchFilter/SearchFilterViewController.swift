@@ -56,6 +56,9 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
         // Close Button
         self.navigationItem.leftBarButtonItem = buttonClose
 
+        // Navigation Title
+        navigationItem.title = "Filter"
+
         // Configure slider
         slider.lowerHandleImageNormal = UIImage(named: "ic_thumb")
         slider.upperHandleImageNormal = UIImage(named: "ic_thumb")
