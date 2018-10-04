@@ -9,6 +9,7 @@
 import UIKit
 
 class CheckBoxTableViewCell: UITableViewCell {
+    weak var delegate: ShopTypeViewDelegate?
 
     @IBOutlet weak var buttonCheckbox: UIButton!
     @IBOutlet weak var labelTitle: UILabel!
@@ -20,5 +21,14 @@ class CheckBoxTableViewCell: UITableViewCell {
     // MARK: - Button Action
     @IBAction func buttonCheckBoxOnClick() {
         buttonCheckbox.isSelected = !buttonCheckbox.isSelected
+
+        guard let text = labelTitle.text,
+            let shopType = ShopType(rawValue: text) else { return }
+
+        if buttonCheckbox.isSelected {
+            delegate?.onShopTypeDidCheck(type: shopType)
+        } else {
+            delegate?.onShopTypeDidUncheck(type: shopType)
+        }
     }
 }

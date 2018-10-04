@@ -115,6 +115,9 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
 
 // MARK: - ShopTypeViewDelegate
 extension SearchFilterViewController: ShopTypeViewDelegate {
+    func onShopTypeDidUncheck(type shopType: ShopType) {
+    }
+
     func onShopTypeDidCheck(type shopType: ShopType) {
     }
 }

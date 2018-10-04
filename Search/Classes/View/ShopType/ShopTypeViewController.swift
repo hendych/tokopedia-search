@@ -10,6 +10,8 @@ import UIKit
 
 protocol ShopTypeViewDelegate: class {
     func onShopTypeDidCheck(type shopType: ShopType)
+
+    func onShopTypeDidUncheck(type shopType: ShopType)
 }
 
 class ShopTypeViewController: UIViewController, ShopTypeView {
@@ -64,6 +66,7 @@ extension ShopTypeViewController: UITableViewDelegate, UITableViewDataSource {
         switch cell {
         case is CheckBoxTableViewCell:
             guard let cell = cell as? CheckBoxTableViewCell else { return }
+            cell.delegate = delegate
             cell.labelTitle.text = shopTypeData[indexPath.row].keys.first?.rawValue
         default:
             break
