@@ -145,6 +145,12 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
             }
 
             if removedCircularView != nil {
+                if circularView.frame.origin.y > previousOriginY {
+                    // Shrink container
+                    shopTypeContainer.frame.size.height -= (circularView.frame.size.height
+                        + Constants.padding)
+                }
+
                 circularView.frame.origin.x = previousOriginX
                 circularView.frame.origin.y = previousOriginY
             }
