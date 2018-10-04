@@ -23,11 +23,13 @@ class SearchViewTests: XCTestCase {
     func testOnViewDidLoadRequestSearch() {
         let initialSearchFilter = SearchFilter()
 
+        view.loadViewIfNeeded()
+
         view.viewDidLoad()
 
         XCTAssert(view.isLoading == true,
                   "Expect isLoading is true when requestSearch")
-        XCTAssert(mockEventHandler?.invokedOnRequestSearchCount == 1,
+        XCTAssert(mockEventHandler?.invokedOnRequestSearch == true,
                   "Expect invoke requestSearch once")
         XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.filter == initialSearchFilter,
                   "Expect requestSearch invoked with default search filter")
@@ -55,6 +57,8 @@ class SearchViewTests: XCTestCase {
 
             results.append(item)
         }
+
+        view.loadViewIfNeeded()
 
         view.showSearchResults(searchResults: results, nextPage: 3)
 
@@ -100,6 +104,8 @@ class SearchViewTests: XCTestCase {
                                              height: UIScreen.main.bounds.height * 2)
         dummyScrollView.contentOffset = CGPoint(x: 0, y: dummyScrollView.contentSize.height)
 
+        view.loadViewIfNeeded()
+
         // Show initial data
         view.showSearchResults(searchResults: results, nextPage: 2)
 
@@ -107,7 +113,7 @@ class SearchViewTests: XCTestCase {
 
         XCTAssert(view.isLoading == true,
                   "Expect isLoading is true when requestSearch")
-        XCTAssert(mockEventHandler?.invokedOnRequestSearchCount == 1,
+        XCTAssert(mockEventHandler?.invokedOnRequestSearch == true,
                   "Expect invoke request search result once")
         XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.filter == initialSearchFilter,
                   "Expect requestSearch invoked with default search filter")
@@ -160,6 +166,8 @@ class SearchViewTests: XCTestCase {
             results.append(item)
         }
 
+        view.loadViewIfNeeded()
+
         // Fill up data first
         view.showSearchResults(searchResults: results, nextPage: 2)
 
@@ -170,7 +178,7 @@ class SearchViewTests: XCTestCase {
                   "Expect when new search filter applied, search result is empty.")
         XCTAssert(view.isLoading == true,
                   "Expect isLoading is true when requestSearch")
-        XCTAssert(mockEventHandler?.invokedOnRequestSearchCount == 1,
+        XCTAssert(mockEventHandler?.invokedOnRequestSearch == true,
                   "Expect when new search filter applied, invoke api request once")
         XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.start == 0,
                   "Expect requestSearch invoked with start 0")

@@ -28,8 +28,6 @@ class SearchViewController: UIViewController, SearchView {
     // MARK: - Initializer
     init() {
         super.init(nibName: "SearchViewController", bundle: nil)
-
-        loadViewIfNeeded()
     }
 
     required init?(coder aDecoder: NSCoder) {

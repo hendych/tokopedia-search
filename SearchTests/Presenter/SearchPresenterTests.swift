@@ -24,6 +24,8 @@ class SearchPresenterTests: XCTestCase {
         mockRouter = router
         mockInteractor = interactor
 
+        mockView?.loadViewIfNeeded()
+
         presenter = SearchPresenter(interactor: interactor, router: router)
         presenter?.view = mockView
     }
