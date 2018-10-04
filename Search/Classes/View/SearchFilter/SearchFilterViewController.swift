@@ -69,6 +69,10 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
         slider.lowerValue = Constants.minSliderValue
         slider.stepValue = Constants.sliderStep
 
+        // Button Apply
+        buttonApply.setBackgroundImage(UIImage.backgroundImage(withColor: .lightGreen),
+                                       for: .normal)
+
         // Set initial price
         onSliderValueChanged(slider)
     }
