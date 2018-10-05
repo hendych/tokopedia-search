@@ -173,4 +173,27 @@ class SearchFilterViewTests: XCTestCase {
 
         XCTAssert(shopTypes == [ShopType.goldMerchant], "Expect shop type is gold merchant")
     }
+
+    func testActionButtonResetOnClicked() {
+        let mockSearchFilter = SearchFilter(minPrice: "200",
+                                            maxPrice: "1000",
+                                            wholesale: true,
+                                            official: true,
+                                            fshop: "2")
+        let defaultSearchFilter = SearchFilter()
+        let mockView = MockSearchFilterView(initialSearchFilter: mockSearchFilter)
+
+        mockView.onButtonResetClicked()
+
+        XCTAssert(mockView.initialSearchFilter == defaultSearchFilter,
+                  "Expect search filter back to default")
+        XCTAssert(mockView.slider.lowerValue == Float(defaultSearchFilter.minPrice) ?? 0,
+                  "Expect view slider back to default")
+        XCTAssert(mockView.slider.upperValue == Float(defaultSearchFilter.maxPrice) ?? 0,
+                  "Expect view slider back to default")
+        XCTAssert(mockView.getShopTypes() == nil,
+                  "Expect view shop types to default")
+        XCTAssert(mockView.switchWholesale.isOn == defaultSearchFilter.wholesale,
+                  "Expect view shop types to default")
+    }
 }

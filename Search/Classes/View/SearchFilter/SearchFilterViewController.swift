@@ -28,6 +28,7 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     var presenter: SearchFilterEventHandler?
 
     @IBOutlet var buttonClose: UIBarButtonItem!
+    @IBOutlet var buttonReset: UIBarButtonItem!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var labelMinPrice: UILabel!
     @IBOutlet weak var labelMaxPrice: UILabel!
@@ -66,9 +67,20 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
         // Close Button
         self.navigationItem.leftBarButtonItem = buttonClose
 
+        // Reset Button
+        self.navigationItem.rightBarButtonItem = buttonReset
+
         // Navigation Title
         navigationItem.title = "Filter"
 
+        // Button Apply
+        buttonApply.setBackgroundImage(UIImage.backgroundImage(withColor: .lightGreen),
+                                       for: .normal)
+
+        configureUIValues()
+    }
+
+    private func configureUIValues() {
         // Configure slider
         slider.lowerHandleImageNormal = UIImage(named: "ic_thumb")
         slider.upperHandleImageNormal = UIImage(named: "ic_thumb")
@@ -93,10 +105,6 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
         if initialSearchFilter.official {
             addShopType(shopType: .officialStore)
         }
-
-        // Button Apply
-        buttonApply.setBackgroundImage(UIImage.backgroundImage(withColor: .lightGreen),
-                                       for: .normal)
 
         // Set initial price
         onSliderValueChanged(slider)
@@ -235,6 +243,16 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
                                         official: official, fshop: fshop)
 
         delegate?.searchFilterDidApply(newFilter: searchFilter)
+    }
+
+    @IBAction func onButtonResetClicked() {
+        // Reset to default
+        self.initialSearchFilter = SearchFilter()
+
+        removeShopType(shopType: .goldMerchant)
+        removeShopType(shopType: .officialStore)
+
+        configureUIValues()
     }
 }
 

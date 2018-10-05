@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="buttonApply" destination="jbB-ZV-7wA" id="LbI-BN-lOF"/>
                 <outlet property="buttonClose" destination="NJx-F9-ENF" id="Ijf-Na-vgM"/>
+                <outlet property="buttonReset" destination="tZN-3Y-Mgr" id="hou-oj-wdQ"/>
                 <outlet property="labelMaxPrice" destination="ZKw-ZZ-ESy" id="aQc-Al-cs8"/>
                 <outlet property="labelMinPrice" destination="I1J-Rp-w3L" id="s6e-ad-Dg6"/>
                 <outlet property="scrollView" destination="PgZ-UP-ETQ" id="Kks-bL-gZs"/>
@@ -211,6 +212,11 @@
             <color key="tintColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <action selector="onButtonCloseClicked" destination="-1" id="gQe-p0-uRB"/>
+            </connections>
+        </barButtonItem>
+        <barButtonItem title="Reset" style="plain" id="tZN-3Y-Mgr">
+            <connections>
+                <action selector="onButtonResetClicked" destination="-1" id="6uA-ja-Z16"/>
             </connections>
         </barButtonItem>
         <tapGestureRecognizer id="RAl-0J-26V">
