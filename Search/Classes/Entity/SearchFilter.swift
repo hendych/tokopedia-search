@@ -9,6 +9,8 @@
 import Foundation
 
 struct SearchFilter: Equatable {
+    static let goldSeller = "2"
+
     let query = "samsung"
 
     let minPrice: String

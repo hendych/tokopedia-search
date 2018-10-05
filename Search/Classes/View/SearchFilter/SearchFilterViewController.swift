@@ -14,11 +14,9 @@ private struct Constants {
                                                 height: 4)
     static let minSliderValue: Float = 10000
     static let maxSliderValue: Float = 1000000
-    static let defaultUpperSliderValue: Float = 800000
     static let sliderStep: Float = 10
     static let padding: CGFloat = 10
     static let defaultOriginYShopType: CGFloat = 40
-    static let isFshop = "2"
 }
 
 protocol SearchFilterViewDelegate: class {
@@ -38,11 +36,11 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     @IBOutlet weak var buttonApply: UIButton!
     @IBOutlet weak var shopTypeContainer: UIView!
 
-    private(set) var initialSearchFilter: SearchFilter?
+    private(set) var initialSearchFilter: SearchFilter
 
     // MARK: - Initializer
     init(initialSearchFilter: SearchFilter?) {
-        self.initialSearchFilter = initialSearchFilter
+        self.initialSearchFilter = initialSearchFilter ?? SearchFilter()
 
         super.init(nibName: "SearchFilterViewController", bundle: nil)
 
@@ -80,9 +78,21 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
                                                               size: Constants.trackSliderSize)
         slider.minimumValue = Constants.minSliderValue
         slider.maximumValue = Constants.maxSliderValue
-        slider.upperValue = Constants.defaultUpperSliderValue
-        slider.lowerValue = Constants.minSliderValue
+        slider.upperValue = Float(initialSearchFilter.maxPrice) ?? 0
+        slider.lowerValue = Float(initialSearchFilter.minPrice) ?? 0
         slider.stepValue = Constants.sliderStep
+
+        // Configure wholesale
+        switchWholesale.isOn = initialSearchFilter.wholesale
+
+        // Configure shop type
+        if initialSearchFilter.fshop == SearchFilter.goldSeller {
+            addShopType(shopType: .goldMerchant)
+        }
+
+        if initialSearchFilter.official {
+            addShopType(shopType: .officialStore)
+        }
 
         // Button Apply
         buttonApply.setBackgroundImage(UIImage.backgroundImage(withColor: .lightGreen),
@@ -213,7 +223,7 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
         var fshop = ""
         for shopType in getShopTypes() ?? [ShopType]() {
             if shopType == .goldMerchant {
-                fshop = Constants.isFshop
+                fshop = SearchFilter.goldSeller
             } else if shopType == .officialStore {
                 official = true
             }
