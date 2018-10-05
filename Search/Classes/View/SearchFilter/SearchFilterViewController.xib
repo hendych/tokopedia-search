@@ -18,6 +18,7 @@
                 <outlet property="labelMinPrice" destination="I1J-Rp-w3L" id="s6e-ad-Dg6"/>
                 <outlet property="scrollView" destination="PgZ-UP-ETQ" id="Kks-bL-gZs"/>
                 <outlet property="shopTypeContainer" destination="RXm-pT-YbR" id="ReD-6E-jAO"/>
+                <outlet property="shopTypeContainerHeight" destination="uv8-Zq-RtM" id="zfH-Ek-JfW"/>
                 <outlet property="slider" destination="pRP-5B-y6D" id="ix5-XQ-WO9"/>
                 <outlet property="switchWholesale" destination="A0A-28-wlf" id="JWQ-WH-soT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

@@ -17,6 +17,7 @@ private struct Constants {
     static let sliderStep: Float = 10
     static let padding: CGFloat = 10
     static let defaultOriginYShopType: CGFloat = 40
+    static let defaultShopTypeContainerHeight: CGFloat = 100
 }
 
 protocol SearchFilterViewDelegate: class {
@@ -36,6 +37,7 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     @IBOutlet weak var switchWholesale: UISwitch!
     @IBOutlet weak var buttonApply: UIButton!
     @IBOutlet weak var shopTypeContainer: UIView!
+    @IBOutlet weak var shopTypeContainerHeight: NSLayoutConstraint!
 
     private(set) var initialSearchFilter: SearchFilter
 
@@ -139,7 +141,7 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
                 originY = lastView.frame.origin.y + lastView.frame.size.height
                     + Constants.padding
 
-                shopTypeContainer.frame.size.height += circularView.frame.size.height
+                shopTypeContainerHeight.constant += circularView.frame.size.height
                     + Constants.padding
             }
         }
@@ -149,41 +151,43 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     }
 
     func removeShopType(shopType: ShopType) {
-        var circularViews = [CircularLabelView]()
         for subview in shopTypeContainer.subviews {
-            if let circularView = subview as? CircularLabelView {
-                circularViews.append(circularView)
-            }
-        }
-
-        var removedCircularView: CircularLabelView?
-        var previousOriginX: CGFloat = 0
-        var previousOriginY: CGFloat = 0
-        for index in 0..<circularViews.count {
-            let circularView = circularViews[index]
-            if circularView.text == shopType.rawValue {
-                // Remove
-                removedCircularView = circularView
-
-                previousOriginX = circularView.frame.origin.x
-                previousOriginY = circularView.frame.origin.y
-
+            guard let circularLabelView = subview as? CircularLabelView else {
                 continue
             }
 
-            if removedCircularView != nil {
-                if circularView.frame.origin.y > previousOriginY {
-                    // Shrink container
-                    shopTypeContainer.frame.size.height -= (circularView.frame.size.height
-                        + Constants.padding)
-                }
+            if circularLabelView.text == shopType.rawValue {
+                // Remove
+                circularLabelView.removeFromSuperview()
 
-                circularView.frame.origin.x = previousOriginX
-                circularView.frame.origin.y = previousOriginY
+                break
             }
         }
 
-        removedCircularView?.removeFromSuperview()
+        // Reassign views frame
+        let visibleHorizontalScreen = UIScreen.main.bounds.width - Constants.padding
+        var previousOriginX = Constants.padding
+        var previousOriginY = Constants.defaultOriginYShopType
+        for subview in shopTypeContainer.subviews {
+            guard let circularLabelView = subview as? CircularLabelView else {
+                continue
+            }
+
+            circularLabelView.frame.origin.x = previousOriginX
+            circularLabelView.frame.origin.y = previousOriginY
+
+            shopTypeContainerHeight.constant = previousOriginY
+                + circularLabelView.frame.size.height + Constants.padding
+
+            previousOriginX += circularLabelView.frame.size.width
+
+            if previousOriginX > visibleHorizontalScreen {
+                previousOriginY = circularLabelView.frame.origin.y
+                    + circularLabelView.frame.size.height
+                    + Constants.padding
+                previousOriginX = Constants.padding
+            }
+        }
     }
 
     func getShopTypes() -> [ShopType]? {
