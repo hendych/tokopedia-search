@@ -35,5 +35,6 @@ class SearchPresenter: SearchEventHandler, SearchInteractorOutput {
     }
 
     func foundApiError(error: ApiError) {
+        view?.showApiError(apiError: error)
     }
 }

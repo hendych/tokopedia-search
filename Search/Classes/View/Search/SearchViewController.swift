@@ -77,6 +77,9 @@ class SearchViewController: UIViewController, SearchView {
         self.start = nextPage
     }
 
+    func showApiError(apiError: ApiError) {
+    }
+
     // MARK: - Button Action
     @IBAction func onButtonFilterClicked() {
         presenter?.onButtonFilterClicked(withFilter: filter)

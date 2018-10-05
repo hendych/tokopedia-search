@@ -19,7 +19,22 @@ class MockSearchView: SearchViewController {
         invokedShowSearchResultsCount += 1
         invokedShowSearchResultsParameters = (searchResults, nextPage)
         invokedShowSearchResultsParametersList.append((searchResults, nextPage))
-        super.showSearchResults(searchResults: searchResults, nextPage: nextPage)
+    }
+    var invokedShowApiError = false
+    var invokedShowApiErrorCount = 0
+    var invokedShowApiErrorParameters: (apiError: ApiError, Void)?
+    var invokedShowApiErrorParametersList = [(apiError: ApiError, Void)]()
+    override func showApiError(apiError: ApiError) {
+        invokedShowApiError = true
+        invokedShowApiErrorCount += 1
+        invokedShowApiErrorParameters = (apiError, ())
+        invokedShowApiErrorParametersList.append((apiError, ()))
+    }
+    var invokedOnButtonFilterClicked = false
+    var invokedOnButtonFilterClickedCount = 0
+    override func onButtonFilterClicked() {
+        invokedOnButtonFilterClicked = true
+        invokedOnButtonFilterClickedCount += 1
     }
     var invokedPresent = false
     var invokedPresentCount = 0

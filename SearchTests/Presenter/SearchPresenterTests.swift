@@ -89,4 +89,15 @@ class SearchPresenterTests: XCTestCase {
             .isEqual(mockView) ?? false,
                   "Expect parameter sent is the same view injected from presenter")
     }
+
+    func testOutputApiError() {
+        let apiError = ApiError(type: .networkError)
+
+        presenter?.foundApiError(error: apiError)
+
+        XCTAssert(mockView?.invokedShowApiErrorCount == 1,
+                  "Expect invoke show api error on view once")
+        XCTAssert(mockView?.invokedShowApiErrorParameters?.apiError == apiError,
+                  "Expect api error parameter sent is the same.")
+    }
 }
