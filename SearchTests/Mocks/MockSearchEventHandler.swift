@@ -22,8 +22,12 @@ class MockSearchEventHandler: SearchEventHandler {
     }
     var invokedOnButtonFilterClicked = false
     var invokedOnButtonFilterClickedCount = 0
-    func onButtonFilterClicked() {
+    var invokedOnButtonFilterClickedParameters: (filter: SearchFilter, Void)?
+    var invokedOnButtonFilterClickedParametersList = [(filter: SearchFilter, Void)]()
+    func onButtonFilterClicked(withFilter filter: SearchFilter) {
         invokedOnButtonFilterClicked = true
         invokedOnButtonFilterClickedCount += 1
+        invokedOnButtonFilterClickedParameters = (filter, ())
+        invokedOnButtonFilterClickedParametersList.append((filter, ()))
     }
 }

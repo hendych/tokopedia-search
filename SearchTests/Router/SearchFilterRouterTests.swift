@@ -10,12 +10,13 @@ import XCTest
 @testable import Search
 
 class SearchFilterRouterTests: XCTestCase {
-    let router = SearchFilterRouter(delegate: nil)
+    let router = SearchFilterRouter(initialSearchFilter: nil,
+                                    delegate: nil)
 
     func testPushShopTypeView() {
         let expectedShopTypeData = [ShopType.goldMerchant: true,
                                      ShopType.officialStore: false]
-        let mockSearchFilterView = MockSearchFilterView()
+        let mockSearchFilterView = MockSearchFilterView(initialSearchFilter: nil)
         let navController = UINavigationController(rootViewController: mockSearchFilterView)
 
         router.pushShopTypeViewController(from: mockSearchFilterView,

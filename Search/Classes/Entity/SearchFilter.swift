@@ -18,7 +18,9 @@ struct SearchFilter: Equatable {
     let fshop: String
 
     init() {
-        self.init(minPrice: "100", maxPrice: "8000000", wholesale: false, official: true, fshop: "2")
+        self.init(minPrice: "10000", maxPrice: "800000",
+                  wholesale: false,
+                  official: false, fshop: "")
     }
 
     init(minPrice: String, maxPrice: String, wholesale: Bool, official: Bool, fshop: String) {

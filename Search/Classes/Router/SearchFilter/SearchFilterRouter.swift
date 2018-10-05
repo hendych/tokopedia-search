@@ -11,7 +11,7 @@ import UIKit
 class SearchFilterRouter: Router {
 
     var viewController: UINavigationController {
-        let view = SearchFilterViewController()
+        let view = SearchFilterViewController(initialSearchFilter: initialSearchFilter)
         let interactor = SearchFilterInteractor()
         let presenter = SearchFilterPresenter(interactor: interactor, router: self)
         let navigationController = UINavigationController(rootViewController: view)
@@ -26,11 +26,18 @@ class SearchFilterRouter: Router {
     }
 
     private weak var delegate: SearchFilterViewDelegate?
+    private var initialSearchFilter: SearchFilter?
 
-    init(delegate: SearchFilterViewDelegate?) {
+    init(initialSearchFilter: SearchFilter?, delegate: SearchFilterViewDelegate?) {
         self.delegate = delegate
+        self.initialSearchFilter = initialSearchFilter
     }
 
+    deinit {
+        debugPrint("\(String(describing: self)) deinit")
+    }
+
+    // MARK: - Navigations
     func pushShopTypeViewController(from view: SearchFilterViewController?,
                                     initialShopType: [ShopType]?,
                                     animated: Bool) {

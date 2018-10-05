@@ -13,7 +13,7 @@ import NMRangeSlider
 class SearchFilterViewTests: XCTestCase {
 
     var mockEventHandler: MockSearchFilterEventHandler?
-    var view = SearchFilterViewController()
+    var view = SearchFilterViewController(initialSearchFilter: nil)
 
     override func setUp() {
         mockEventHandler = MockSearchFilterEventHandler()

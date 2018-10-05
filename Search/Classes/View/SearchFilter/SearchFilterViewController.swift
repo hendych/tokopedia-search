@@ -38,8 +38,12 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     @IBOutlet weak var buttonApply: UIButton!
     @IBOutlet weak var shopTypeContainer: UIView!
 
+    private(set) var initialSearchFilter: SearchFilter?
+
     // MARK: - Initializer
-    init() {
+    init(initialSearchFilter: SearchFilter?) {
+        self.initialSearchFilter = initialSearchFilter
+
         super.init(nibName: "SearchFilterViewController", bundle: nil)
 
         loadViewIfNeeded()
@@ -47,6 +51,10 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    deinit {
+        debugPrint("\(String(describing: self)) deinit")
     }
 
     // MARK: - Life cycle

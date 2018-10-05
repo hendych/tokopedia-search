@@ -142,6 +142,9 @@ class SearchViewTests: XCTestCase {
 
         XCTAssert(mockEventHandler?.invokedOnButtonFilterClickedCount == 1,
                   "Expect invoke event handler onButtonFilterClicked once")
+        XCTAssert(mockEventHandler?.invokedOnButtonFilterClickedParameters?
+            .filter == view.filter,
+                  "Expect invoke event handler onButtonFilterClicked once")
     }
 
     func testReceiveNewSearchFilter() {

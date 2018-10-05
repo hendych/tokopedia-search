@@ -31,4 +31,8 @@ class ShopTypeRouter: Router {
         self.delegate = delegate
         self.initialShopType = initialShopType
     }
+
+    deinit {
+        debugPrint("\(String(describing: self)) deinit")
+    }
 }

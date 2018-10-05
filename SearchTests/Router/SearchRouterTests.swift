@@ -14,9 +14,12 @@ class SearchRouterTests: XCTestCase {
     let router = SearchRouter()
 
     func testPresentSearchFilterView() {
+        let initialSearchFilter = SearchFilter()
         let mockSearchView = MockSearchView()
 
-        router.presentSearchFilterView(onView: mockSearchView, animated: false)
+        router.presentSearchFilterView(onView: mockSearchView,
+                                       initialSearchFilter: initialSearchFilter,
+                                       animated: false)
 
         XCTAssert(mockSearchView.invokedPresentCount == 1,
                   "Expect search view invoke present once")
@@ -34,6 +37,9 @@ class SearchRouterTests: XCTestCase {
 
                 return
         }
+
+        XCTAssert(searchFilterView.initialSearchFilter == initialSearchFilter,
+                  "Expect initial search filter is same with sent to search filter view")
 
         XCTAssert((searchFilterView.delegate as? SearchViewController)?
             .isEqual(mockSearchView) ?? false,

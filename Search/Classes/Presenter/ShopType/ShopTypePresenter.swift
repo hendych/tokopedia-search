@@ -17,4 +17,8 @@ class ShopTypePresenter: ShopTypeEventHandler, ShopTypeInteractorOutput {
         self.interactor = interactor
         self.router = router
     }
+
+    deinit {
+        debugPrint("\(String(describing: self)) deinit")
+    }
 }

@@ -76,10 +76,15 @@ class SearchPresenterTests: XCTestCase {
     }
 
     func testEventOnButtonClicked() {
-        presenter?.onButtonFilterClicked()
+        let searchFilter = SearchFilter(minPrice: "0", maxPrice: "20", wholesale: true,
+                                        official: true, fshop: "1")
+        presenter?.onButtonFilterClicked(withFilter: searchFilter)
 
         XCTAssert(mockRouter?.invokedPresentSearchFilterViewCount == 1,
                   "Expect router to invoke presentSearchFilterView once")
+        XCTAssert(mockRouter?.invokedPresentSearchFilterViewParameters?
+            .initialSearchFilter == searchFilter,
+                  "Expect search filter sent to router is the same")
         XCTAssert(mockRouter?.invokedPresentSearchFilterViewParameters?.view?
             .isEqual(mockView) ?? false,
                   "Expect parameter sent is the same view injected from presenter")

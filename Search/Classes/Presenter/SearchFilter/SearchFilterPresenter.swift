@@ -18,6 +18,10 @@ class SearchFilterPresenter: SearchFilterEventHandler, SearchFilterInteractorOut
         self.router = router
     }
 
+    deinit {
+        debugPrint("\(String(describing: self)) deinit")
+    }
+
     // MARK: - SearchFilterEventHandler
     func onButtonCloseClicked() {
         (view as? UIViewController)?.dismiss(animated: true, completion: nil)
