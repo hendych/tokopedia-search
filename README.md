@@ -1,7 +1,10 @@
 # Build Status
 
-[![Build Status](https://travis-ci.org/hendych/tokopedia-search.svg)](https://travis-ci.org/hendych/tokopedia-search) [![codecov](https://codecov.io/gh/hendych/tokopedia-search/branch/master/graph/badge.svg)](https://codecov.io/gh/hendych/tokopedia-search)
+### Master
+[![Build Status](https://travis-ci.org/hendych/tokopedia-search.svg?branch=master)](https://travis-ci.org/hendych/tokopedia-search) [![codecov](https://codecov.io/gh/hendych/tokopedia-search/branch/master/graph/badge.svg)](https://codecov.io/gh/hendych/tokopedia-search)
 
+### Develop
+[![Build Status](https://travis-ci.org/hendych/tokopedia-search.svg?branch=develop)](https://travis-ci.org/hendych/tokopedia-search) [![codecov](https://codecov.io/gh/hendych/tokopedia-search/branch/develop/graph/badge.svg)](https://codecov.io/gh/hendych/tokopedia-search)
 
 # Introduction
 Welcome to Tokopedia mini assignment test repo. This project is written based on [Memory Leak Free VIPER TDD](https://github.com/hendych/VIPER-TDD). For more details VIPER, click this [link](https://www.objc.io/issues/13-architecture/viper/).
