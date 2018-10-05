@@ -18,6 +18,7 @@ private struct Constants {
     static let sliderStep: Float = 10
     static let padding: CGFloat = 10
     static let defaultOriginYShopType: CGFloat = 40
+    static let isFshop = "2"
 }
 
 protocol SearchFilterViewDelegate: class {
@@ -159,6 +160,23 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
         removedCircularView?.removeFromSuperview()
     }
 
+    func getShopTypes() -> [ShopType]? {
+        var shopTypes: [ShopType]?
+        for subview in shopTypeContainer.subviews {
+            if let circularView = subview as? CircularLabelView {
+                if shopTypes == nil {
+                    shopTypes = [ShopType]()
+                }
+
+                if let shopType = ShopType(rawValue: circularView.text) {
+                    shopTypes?.append(shopType)
+                }
+            }
+        }
+
+        return shopTypes
+    }
+
     // MARK: - Action
     @IBAction func onButtonCloseClicked() {
         presenter?.onButtonCloseClicked()
@@ -179,27 +197,24 @@ class SearchFilterViewController: UIViewController, SearchFilterView {
     }
 
     @IBAction func onShopTypeClicked() {
-        var shopTypes: [ShopType]?
-        for subview in shopTypeContainer.subviews {
-            if let circularView = subview as? CircularLabelView {
-                if shopTypes == nil {
-                    shopTypes = [ShopType]()
-                }
-
-                if let shopType = ShopType(rawValue: circularView.text) {
-                    shopTypes?.append(shopType)
-                }
-            }
-        }
-
-        presenter?.onShopTypeClicked(initialShopType: shopTypes)
+        presenter?.onShopTypeClicked(initialShopType: getShopTypes())
     }
 
     @IBAction func onButtonApplyClicked() {
+        var official = false
+        var fshop = ""
+        for shopType in getShopTypes() ?? [ShopType]() {
+            if shopType == .goldMerchant {
+                fshop = Constants.isFshop
+            } else if shopType == .officialStore {
+                official = true
+            }
+        }
+
         let searchFilter = SearchFilter(minPrice: String(format: "%.0f", slider.lowerValue),
                                         maxPrice: String(format: "%.0f", slider.upperValue),
                                         wholesale: switchWholesale.isOn,
-                                        official: false, fshop: "2")
+                                        official: official, fshop: fshop)
 
         delegate?.searchFilterDidApply(newFilter: searchFilter)
     }
