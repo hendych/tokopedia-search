@@ -24,6 +24,7 @@ class SearchViewController: UIViewController, SearchView {
     private(set) var start = 0
     private(set) var searchResults = [ProductItem]()
     private(set) var isLoading = false
+    private(set) var alert: UIAlertController?
 
     // MARK: - Initializer
     init() {
@@ -78,6 +79,14 @@ class SearchViewController: UIViewController, SearchView {
     }
 
     func showApiError(apiError: ApiError) {
+        let alertView = UIAlertController(title: nil,
+                                          message: apiError.message,
+                                          preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+
+        alert = alertView
+
+        present(alertView, animated: true, completion: nil)
     }
 
     // MARK: - Button Action

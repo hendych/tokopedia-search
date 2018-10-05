@@ -192,4 +192,15 @@ class SearchViewTests: XCTestCase {
         XCTAssert(mockEventHandler?.invokedOnRequestSearchParameters?.num == 10,
                   "Expect requestSearch invoked with num 10")
     }
+
+    func testShowAlert() {
+        let apiError = ApiError(type: .networkError)
+
+        view.showApiError(apiError: apiError)
+
+        XCTAssert(view.alert != nil,
+                  "Expect alert is not nil")
+        XCTAssert(view.alert?.message == apiError.message,
+                  "Expect alert shown with the same message")
+    }
 }
