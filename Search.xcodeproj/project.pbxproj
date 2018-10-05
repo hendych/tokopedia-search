@@ -61,6 +61,7 @@
 		52F5EFA621665C3100321B32 /* CircularLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EFA521665C3100321B32 /* CircularLabelView.swift */; };
 		52F5EFAA2166615700321B32 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EFA92166615700321B32 /* UIViewExtension.swift */; };
 		52F5EFAC2166638B00321B32 /* ShopType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EFAB2166638B00321B32 /* ShopType.swift */; };
+		52F5EFAE2167284F00321B32 /* ShopTypeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EFAD2167284E00321B32 /* ShopTypeViewTests.swift */; };
 		52FCE08221639EAA00C6212E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE08121639EAA00C6212E /* AppDelegate.swift */; };
 		52FCE08C21639EAD00C6212E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FCE08A21639EAD00C6212E /* LaunchScreen.storyboard */; };
 		52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE09621639EAD00C6212E /* SearchFilterTests.swift */; };
@@ -142,6 +143,7 @@
 		52F5EFA521665C3100321B32 /* CircularLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLabelView.swift; sourceTree = "<group>"; };
 		52F5EFA92166615700321B32 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		52F5EFAB2166638B00321B32 /* ShopType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopType.swift; sourceTree = "<group>"; };
+		52F5EFAD2167284E00321B32 /* ShopTypeViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeViewTests.swift; sourceTree = "<group>"; };
 		52FCE07E21639EAA00C6212E /* Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCE08121639EAA00C6212E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FCE08B21639EAD00C6212E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			children = (
 				52B4C5762163DC1400958A90 /* SearchViewTests.swift */,
 				52F5EF792164965600321B32 /* SearchFilterViewTests.swift */,
+				52F5EFAD2167284E00321B32 /* ShopTypeViewTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -764,6 +767,7 @@
 				52B4C5632163CBC700958A90 /* MockSearchService.swift in Sources */,
 				52B4C5702163D8B000958A90 /* SearchPresenterTests.swift in Sources */,
 				52F5EF9A2164D2BA00321B32 /* SearchFilterRouterTests.swift in Sources */,
+				52F5EFAE2167284F00321B32 /* ShopTypeViewTests.swift in Sources */,
 				52FCE09721639EAD00C6212E /* SearchFilterTests.swift in Sources */,
 				52B4C5742163D8D600958A90 /* MockSearchView.swift in Sources */,
 				52F5EF84216497A400321B32 /* MockSearchFilterInteractorInput.swift in Sources */,
